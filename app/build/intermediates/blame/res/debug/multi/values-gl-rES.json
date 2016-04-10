@@ -11,13 +11,13 @@
                     "endOffset": 162
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 295,
+                        "startOffset": 284,
                         "endColumn": 111,
-                        "endOffset": 402
+                        "endOffset": 391
                     }
                 }
             },
@@ -26,17 +26,17 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 167,
-                    "endColumn": 111,
-                    "endOffset": 274
+                    "endColumn": 107,
+                    "endOffset": 270
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 407,
-                        "endColumn": 111,
-                        "endOffset": 514
+                        "startOffset": 396,
+                        "endColumn": 107,
+                        "endOffset": 499
                     }
                 }
             },
@@ -44,17 +44,17 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 279,
-                    "endColumn": 107,
-                    "endOffset": 382
+                    "startOffset": 275,
+                    "endColumn": 122,
+                    "endOffset": 393
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 519,
-                        "endColumn": 107,
+                        "startOffset": 504,
+                        "endColumn": 122,
                         "endOffset": 622
                     }
                 }
@@ -63,18 +63,18 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 387,
-                    "endColumn": 84,
-                    "endOffset": 467
+                    "startOffset": 398,
+                    "endColumn": 111,
+                    "endOffset": 505
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
                         "startOffset": 627,
-                        "endColumn": 84,
-                        "endOffset": 707
+                        "endColumn": 111,
+                        "endOffset": 734
                     }
                 }
             },
@@ -82,18 +82,18 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 472,
-                    "endColumn": 101,
-                    "endOffset": 569
+                    "startOffset": 510,
+                    "endColumn": 107,
+                    "endOffset": 613
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 712,
-                        "endColumn": 101,
-                        "endOffset": 809
+                        "startOffset": 739,
+                        "endColumn": 107,
+                        "endOffset": 842
                     }
                 }
             },
@@ -101,18 +101,18 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 574,
-                    "endColumn": 125,
-                    "endOffset": 695
+                    "startOffset": 618,
+                    "endColumn": 84,
+                    "endOffset": 698
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 814,
-                        "endColumn": 125,
-                        "endOffset": 935
+                        "startOffset": 847,
+                        "endColumn": 84,
+                        "endOffset": 927
                     }
                 }
             },
@@ -120,18 +120,18 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 700,
-                    "endColumn": 106,
-                    "endOffset": 802
+                    "startOffset": 703,
+                    "endColumn": 101,
+                    "endOffset": 800
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 940,
-                        "endColumn": 106,
-                        "endOffset": 1042
+                        "startOffset": 932,
+                        "endColumn": 101,
+                        "endOffset": 1029
                     }
                 }
             },
@@ -139,18 +139,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 807,
-                    "endColumn": 108,
-                    "endOffset": 911
+                    "startOffset": 805,
+                    "endColumn": 125,
+                    "endOffset": 926
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1047,
-                        "endColumn": 108,
-                        "endOffset": 1151
+                        "startOffset": 1034,
+                        "endColumn": 125,
+                        "endOffset": 1155
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 916,
-                    "endColumn": 98,
-                    "endOffset": 1010
+                    "startOffset": 931,
+                    "endColumn": 81,
+                    "endOffset": 1008
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1156,
-                        "endColumn": 98,
-                        "endOffset": 1250
+                        "startOffset": 1160,
+                        "endColumn": 81,
+                        "endOffset": 1237
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1015,
-                    "endColumn": 107,
-                    "endOffset": 1118
+                    "startOffset": 1013,
+                    "endColumn": 106,
+                    "endOffset": 1115
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1255,
-                        "endColumn": 107,
-                        "endOffset": 1358
+                        "startOffset": 1242,
+                        "endColumn": 106,
+                        "endOffset": 1344
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1123,
-                    "endColumn": 102,
-                    "endOffset": 1221
+                    "startOffset": 1120,
+                    "endColumn": 108,
+                    "endOffset": 1224
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1363,
-                        "endColumn": 102,
-                        "endOffset": 1461
+                        "startOffset": 1349,
+                        "endColumn": 108,
+                        "endOffset": 1453
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1226,
-                    "endColumn": 106,
-                    "endOffset": 1328
+                    "startOffset": 1229,
+                    "endColumn": 98,
+                    "endOffset": 1323
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1466,
-                        "endColumn": 106,
-                        "endOffset": 1568
+                        "startOffset": 1458,
+                        "endColumn": 98,
+                        "endOffset": 1552
                     }
                 }
             },
@@ -234,18 +234,113 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1333,
-                    "endColumn": 121,
-                    "endOffset": 1450
+                    "startOffset": 1328,
+                    "endColumn": 107,
+                    "endOffset": 1431
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1573,
+                        "startOffset": 1557,
+                        "endColumn": 107,
+                        "endOffset": 1660
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1436,
+                    "endColumn": 102,
+                    "endOffset": 1534
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1665,
+                        "endColumn": 102,
+                        "endOffset": 1763
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1539,
+                    "endColumn": 106,
+                    "endOffset": 1641
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1768,
+                        "endColumn": 106,
+                        "endOffset": 1870
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1646,
+                    "endColumn": 121,
+                    "endOffset": 1763
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1875,
                         "endColumn": 121,
-                        "endOffset": 1690
+                        "endOffset": 1992
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1768,
+                    "endColumn": 99,
+                    "endOffset": 1863
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1997,
+                        "endColumn": 99,
+                        "endOffset": 2092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1868,
+                    "endColumn": 100,
+                    "endOffset": 1964
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-gl-rES\\values-gl-rES.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2097,
+                        "endColumn": 100,
+                        "endOffset": 2193
                     }
                 }
             }

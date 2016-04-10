@@ -6,6 +6,7 @@
     <dimen name="margin_10">10dp</dimen>
     <dimen name="margin_15">15dp</dimen>
     <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
     <dimen name="margin_60">60dp</dimen>
     <dimen name="button_width">250dp</dimen>
     <dimen name="textView_height">60dp</dimen>

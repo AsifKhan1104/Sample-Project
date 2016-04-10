@@ -50,5 +50,17 @@
         android:padding="@dimen/padding_10"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_60"
+        android:layout_marginRight="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_30"
+        android:background="@drawable/login"
+        android:text="@string/searchBook"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
 </LinearLayout>
 

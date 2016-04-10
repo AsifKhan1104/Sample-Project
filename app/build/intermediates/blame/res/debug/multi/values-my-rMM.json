@@ -11,13 +11,13 @@
                     "endOffset": 159
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 295,
+                        "startOffset": 284,
                         "endColumn": 108,
-                        "endOffset": 399
+                        "endOffset": 388
                     }
                 }
             },
@@ -26,17 +26,17 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 164,
-                    "endColumn": 104,
-                    "endOffset": 264
+                    "endColumn": 107,
+                    "endOffset": 267
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 404,
-                        "endColumn": 104,
-                        "endOffset": 504
+                        "startOffset": 393,
+                        "endColumn": 107,
+                        "endOffset": 496
                     }
                 }
             },
@@ -44,17 +44,17 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 269,
-                    "endColumn": 116,
-                    "endOffset": 381
+                    "startOffset": 272,
+                    "endColumn": 124,
+                    "endOffset": 392
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 509,
-                        "endColumn": 116,
+                        "startOffset": 501,
+                        "endColumn": 124,
                         "endOffset": 621
                     }
                 }
@@ -63,18 +63,18 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 386,
-                    "endColumn": 92,
-                    "endOffset": 474
+                    "startOffset": 397,
+                    "endColumn": 104,
+                    "endOffset": 497
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
                         "startOffset": 626,
-                        "endColumn": 92,
-                        "endOffset": 714
+                        "endColumn": 104,
+                        "endOffset": 726
                     }
                 }
             },
@@ -82,18 +82,18 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 479,
-                    "endColumn": 111,
-                    "endOffset": 586
+                    "startOffset": 502,
+                    "endColumn": 116,
+                    "endOffset": 614
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 719,
-                        "endColumn": 111,
-                        "endOffset": 826
+                        "startOffset": 731,
+                        "endColumn": 116,
+                        "endOffset": 843
                     }
                 }
             },
@@ -101,18 +101,18 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 591,
-                    "endColumn": 135,
-                    "endOffset": 722
+                    "startOffset": 619,
+                    "endColumn": 92,
+                    "endOffset": 707
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 831,
-                        "endColumn": 135,
-                        "endOffset": 962
+                        "startOffset": 848,
+                        "endColumn": 92,
+                        "endOffset": 936
                     }
                 }
             },
@@ -120,18 +120,18 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 727,
-                    "endColumn": 124,
-                    "endOffset": 847
+                    "startOffset": 712,
+                    "endColumn": 111,
+                    "endOffset": 819
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 967,
-                        "endColumn": 124,
-                        "endOffset": 1087
+                        "startOffset": 941,
+                        "endColumn": 111,
+                        "endOffset": 1048
                     }
                 }
             },
@@ -139,18 +139,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 852,
-                    "endColumn": 111,
-                    "endOffset": 959
+                    "startOffset": 824,
+                    "endColumn": 135,
+                    "endOffset": 955
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1092,
-                        "endColumn": 111,
-                        "endOffset": 1199
+                        "startOffset": 1053,
+                        "endColumn": 135,
+                        "endOffset": 1184
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 964,
-                    "endColumn": 101,
-                    "endOffset": 1061
+                    "startOffset": 960,
+                    "endColumn": 85,
+                    "endOffset": 1041
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1204,
-                        "endColumn": 101,
-                        "endOffset": 1301
+                        "startOffset": 1189,
+                        "endColumn": 85,
+                        "endOffset": 1270
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1066,
-                    "endColumn": 125,
-                    "endOffset": 1187
+                    "startOffset": 1046,
+                    "endColumn": 124,
+                    "endOffset": 1166
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1306,
-                        "endColumn": 125,
-                        "endOffset": 1427
+                        "startOffset": 1275,
+                        "endColumn": 124,
+                        "endOffset": 1395
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1192,
-                    "endColumn": 110,
-                    "endOffset": 1298
+                    "startOffset": 1171,
+                    "endColumn": 111,
+                    "endOffset": 1278
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1432,
-                        "endColumn": 110,
-                        "endOffset": 1538
+                        "startOffset": 1400,
+                        "endColumn": 111,
+                        "endOffset": 1507
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1303,
-                    "endColumn": 109,
-                    "endOffset": 1408
+                    "startOffset": 1283,
+                    "endColumn": 101,
+                    "endOffset": 1380
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1543,
-                        "endColumn": 109,
-                        "endOffset": 1648
+                        "startOffset": 1512,
+                        "endColumn": 101,
+                        "endOffset": 1609
                     }
                 }
             },
@@ -234,18 +234,113 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1413,
-                    "endColumn": 122,
-                    "endOffset": 1531
+                    "startOffset": 1385,
+                    "endColumn": 125,
+                    "endOffset": 1506
                 },
                 "from": {
-                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1653,
+                        "startOffset": 1614,
+                        "endColumn": 125,
+                        "endOffset": 1735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1511,
+                    "endColumn": 110,
+                    "endOffset": 1617
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1740,
+                        "endColumn": 110,
+                        "endOffset": 1846
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1622,
+                    "endColumn": 109,
+                    "endOffset": 1727
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1851,
+                        "endColumn": 109,
+                        "endOffset": 1956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1732,
+                    "endColumn": 122,
+                    "endOffset": 1850
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1961,
                         "endColumn": 122,
-                        "endOffset": 1771
+                        "endOffset": 2079
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1855,
+                    "endColumn": 99,
+                    "endOffset": 1950
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2084,
+                        "endColumn": 99,
+                        "endOffset": 2179
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1955,
+                    "endColumn": 100,
+                    "endOffset": 2051
+                },
+                "from": {
+                    "file": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2184,
+                        "endColumn": 100,
+                        "endOffset": 2280
                     }
                 }
             }
