@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_10"
+    tools:context="com.bookpal.fragment.SearchFragment">
+
+    <EditText
+        android:id="@+id/editText_bookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:hint="@string/hintBookName"
+        android:padding="@dimen/padding_10"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/text_color_hint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:text="@string/or"
+        android:textColor="@color/text_color_hint" />
+
+    <EditText
+        android:id="@+id/editText_yourLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:hint="@string/hintLocation"
+        android:padding="@dimen/padding_10"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/text_color_hint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:text="@string/or"
+        android:textColor="@color/text_color_hint" />
+
+    <EditText
+        android:id="@+id/editText_isbn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintISBNOrAuthor"
+        android:padding="@dimen/padding_10"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/text_color_hint" />
+</LinearLayout>
+

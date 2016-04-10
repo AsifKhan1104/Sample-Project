@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\res\\merged\\debug\\menu\\drawer.xml",
+        "source": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\src\\main\\res\\menu\\drawer.xml"
+    }
+]
