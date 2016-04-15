@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
+    abi="x86"
     api-level="19"
     density="xhdpi"
     format="7"
-    timestamp="4149268459253" >
+    timestamp="13125382068106" >
 
     <task
         name="javac"
-        duration="1048" />
+        duration="3452" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="409" />
+        duration="919" />
     <task
         name="verifier"
-        duration="148" />
+        duration="115" />
 
     <artifact
         location="P:\Android\Android_Studio_Projects\BookPal\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="4149268459253" >
+    <build timestamp="13125382068106" >
         <artifact
             location="P:\Android\Android_Studio_Projects\BookPal\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
