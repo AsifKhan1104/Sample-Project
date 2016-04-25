@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_color_dark"
+    android:background="@drawable/bg_main"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/padding_10"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_20"
             android:text="@string/paperback"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/text_color_hint"
             android:textColorHint="@color/text_color_hint" />
 
         <RadioButton
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_20"
             android:text="@string/hardcover"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/text_color_hint"
             android:textColorHint="@color/text_color_hint" />
     </RadioGroup>
 
@@ -90,9 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_60"
         android:layout_marginRight="@dimen/margin_60"
-        android:background="@drawable/login"
+        android:background="@color/submit_btn_background"
         android:text="@string/add"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
 </LinearLayout>
 
