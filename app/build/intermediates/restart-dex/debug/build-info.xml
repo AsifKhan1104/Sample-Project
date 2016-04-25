@@ -4,24 +4,55 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="3117991857181" >
+    timestamp="4966805547654"
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="263" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="71" />
     <task
         name="verifier"
-        duration="0" />
+        duration="5" />
 
     <artifact
         location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/resources-debug.ap_"
         type="RESOURCES" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        type="DEX" />
 
     <build timestamp="930358980658" >
         <artifact
@@ -29,13 +60,16 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="2977510838964"
+        timestamp="4966805547654"
         verifier="R_CLASS_CHANGE" >
         <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-            type="DEX" />
+            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
         <artifact
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
             type="DEX" />
         <artifact
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
@@ -61,11 +95,6 @@
         <artifact
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
             type="DEX" />
-    </build>
-    <build timestamp="3117991857181" >
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>
