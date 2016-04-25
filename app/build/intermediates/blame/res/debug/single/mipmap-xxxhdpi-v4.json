@@ -1,6 +1,6 @@
 [
     {
-        "merged": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
-        "source": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }
 ]

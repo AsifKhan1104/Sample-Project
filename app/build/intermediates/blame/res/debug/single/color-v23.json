@@ -1,6 +1,6 @@
 [
     {
-        "merged": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "P:\\Android\\Android_Studio_Projects\\BookPal\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v23/abc_color_highlight_material.xml"
     }
 ]
