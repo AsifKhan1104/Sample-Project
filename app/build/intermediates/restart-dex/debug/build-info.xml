@@ -1,80 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="x86,armeabi-v7a,armeabi"
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="5432065742017"
-    verifier="COMPATIBLE" >
+    timestamp="7464481696166" >
 
     <task
         name="javac"
-        duration="264" />
+        duration="251" />
     <task
         name="instant-run-dex"
-        duration="413" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="18" />
     <task
         name="verifier"
         duration="1" />
 
     <artifact
-        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        type="DEX" />
 
-    <build timestamp="930358980658" >
+    <build timestamp="7109179974428" >
         <artifact
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="4966805547654"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
+    <build timestamp="7464481696166" >
         <artifact
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="5432065742017"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
