@@ -609,25 +609,6 @@
                         "endOffset": 375
                     }
                 }
-            },
-            {
-                "to": {
-                    "startLine": 34,
-                    "startColumn": 4,
-                    "startOffset": 5178,
-                    "endColumn": 109,
-                    "endOffset": 5283
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/res/values-pt-rBR/wallet_strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 230,
-                        "endColumn": 109,
-                        "endOffset": 335
-                    }
-                }
             }
         ]
     }
