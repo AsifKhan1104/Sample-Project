@@ -938,122 +938,8 @@
                     "startLine": 51,
                     "startColumn": 4,
                     "startOffset": 7220,
-                    "endColumn": 113,
-                    "endOffset": 7329
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 293,
-                        "endColumn": 113,
-                        "endOffset": 402
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 52,
-                    "startColumn": 4,
-                    "startOffset": 7334,
-                    "endColumn": 113,
-                    "endOffset": 7443
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 407,
-                        "endColumn": 113,
-                        "endOffset": 516
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 53,
-                    "startColumn": 4,
-                    "startOffset": 7448,
-                    "endColumn": 106,
-                    "endOffset": 7550
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 521,
-                        "endColumn": 106,
-                        "endOffset": 623
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 54,
-                    "startColumn": 4,
-                    "startOffset": 7555,
-                    "endColumn": 113,
-                    "endOffset": 7664
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 628,
-                        "endColumn": 113,
-                        "endOffset": 737
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 55,
-                    "startColumn": 4,
-                    "startOffset": 7669,
-                    "endColumn": 85,
-                    "endOffset": 7750
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 742,
-                        "endColumn": 85,
-                        "endOffset": 823
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 56,
-                    "startColumn": 4,
-                    "startOffset": 7755,
-                    "endColumn": 92,
-                    "endOffset": 7843
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 828,
-                        "endColumn": 92,
-                        "endOffset": 916
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 57,
-                    "startColumn": 4,
-                    "startOffset": 7848,
                     "endColumn": 100,
-                    "endOffset": 7944
+                    "endOffset": 7316
                 },
                 "from": {
                     "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-de/values-de.xml",
@@ -1063,25 +949,6 @@
                         "startOffset": 2071,
                         "endColumn": 100,
                         "endOffset": 2167
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 58,
-                    "startColumn": 4,
-                    "startOffset": 7949,
-                    "endColumn": 109,
-                    "endOffset": 8054
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/res/values-de/wallet_strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 230,
-                        "endColumn": 109,
-                        "endOffset": 335
                     }
                 }
             }

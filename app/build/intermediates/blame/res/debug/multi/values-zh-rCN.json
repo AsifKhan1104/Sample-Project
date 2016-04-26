@@ -938,122 +938,8 @@
                     "startLine": 51,
                     "startColumn": 4,
                     "startOffset": 5995,
-                    "endColumn": 106,
-                    "endOffset": 6097
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-zh-rCN/values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 297,
-                        "endColumn": 106,
-                        "endOffset": 399
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 52,
-                    "startColumn": 4,
-                    "startOffset": 6102,
-                    "endColumn": 98,
-                    "endOffset": 6196
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-zh-rCN/values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 404,
-                        "endColumn": 98,
-                        "endOffset": 498
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 53,
-                    "startColumn": 4,
-                    "startOffset": 6201,
-                    "endColumn": 92,
-                    "endOffset": 6289
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-zh-rCN/values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 503,
-                        "endColumn": 92,
-                        "endOffset": 591
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 54,
-                    "startColumn": 4,
-                    "startOffset": 6294,
-                    "endColumn": 98,
-                    "endOffset": 6388
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-zh-rCN/values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 596,
-                        "endColumn": 98,
-                        "endOffset": 690
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 55,
-                    "startColumn": 4,
-                    "startOffset": 6393,
-                    "endColumn": 81,
-                    "endOffset": 6470
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-zh-rCN/values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 695,
-                        "endColumn": 81,
-                        "endOffset": 772
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 56,
-                    "startColumn": 4,
-                    "startOffset": 6475,
-                    "endColumn": 88,
-                    "endOffset": 6559
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/res/values-zh-rCN/values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 777,
-                        "endColumn": 88,
-                        "endOffset": 861
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 57,
-                    "startColumn": 4,
-                    "startOffset": 6564,
                     "endColumn": 100,
-                    "endOffset": 6660
+                    "endOffset": 6091
                 },
                 "from": {
                     "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-zh-rCN/values-zh-rCN.xml",
@@ -1063,25 +949,6 @@
                         "startOffset": 1951,
                         "endColumn": 100,
                         "endOffset": 2047
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 58,
-                    "startColumn": 4,
-                    "startOffset": 6665,
-                    "endColumn": 101,
-                    "endOffset": 6762
-                },
-                "from": {
-                    "file": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/res/values-zh-rCN/wallet_strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 230,
-                        "endColumn": 101,
-                        "endOffset": 327
                     }
                 }
             }
