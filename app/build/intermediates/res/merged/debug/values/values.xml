@@ -34,6 +34,7 @@
     <color name="colorBlack">#000000</color>
     <color name="colorPrimary">#212121</color>
     <color name="colorPrimaryDark">#000000</color>
+    <color name="colorTransparentBlack">#99000000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
@@ -369,8 +370,8 @@
     <string name="hintYourLocation">Your Location</string>
     <string name="intro1">Discover great books and share</string>
     <string name="intro2">with your friends</string>
-    <string name="login">LOGIN</string>
-    <string name="login_with">LOGIN WITH</string>
+    <string name="login">Login</string>
+    <string name="login_with">Login With</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="or">OR</string>
@@ -380,7 +381,7 @@
     </string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="register">REGISTER</string>
+    <string name="register">Register</string>
     <string name="searchBook">Search</string>
     <string name="signUp">Sign Up</string>
     <string name="skip">SKIP</string>
