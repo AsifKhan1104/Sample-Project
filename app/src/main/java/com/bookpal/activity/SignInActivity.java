@@ -41,4 +41,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        setResult(RESULT_OK);
+        finish();
+    }
 }

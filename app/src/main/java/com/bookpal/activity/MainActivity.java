@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private NavigationView mNavigationView;
+    private static int REQUEST_CODE = 11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity
                 replaceFragment(fragment, getString(R.string.addBook));
             } else {
                 Intent intent = new Intent(this, SignInActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_CODE);
             }
         } else if (id == R.id.nav_share) {
 
@@ -123,5 +124,15 @@ public class MainActivity extends AppCompatActivity
         // Now insert the selected fragment in frame layout
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            if (requestCode == REQUEST_CODE) {
+                mNavigationView.getMenu().getItem(0).setChecked(true);
+            }
+        }
     }
 }

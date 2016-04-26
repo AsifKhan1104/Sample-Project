@@ -4,17 +4,17 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="7464481696166" >
+    timestamp="8096644657914" >
 
     <task
         name="javac"
-        duration="251" />
+        duration="215" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="18" />
+        duration="30" />
     <task
         name="verifier"
         duration="1" />
@@ -28,7 +28,7 @@
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="7464481696166" >
+    <build timestamp="8096644657914" >
         <artifact
             location="/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
             type="DEX" />
