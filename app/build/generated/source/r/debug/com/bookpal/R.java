@@ -2302,6 +2302,7 @@ containing a value of this type.
         public static final int bottom=0x7f0c001a;
         public static final int buttonPanel=0x7f0c0053;
         public static final int button_add=0x7f0c007d;
+        public static final int button_google=0x7f0c0075;
         public static final int button_logIn=0x7f0c0079;
         public static final int button_login=0x7f0c0070;
         public static final int button_search=0x7f0c008a;
@@ -2418,7 +2419,6 @@ containing a value of this type.
         public static final int textSpacerNoButtons=0x7f0c0050;
         public static final int textView=0x7f0c008c;
         public static final int textView_fb=0x7f0c0074;
-        public static final int textView_google=0x7f0c0075;
         public static final int textView_intro=0x7f0c0072;
         public static final int textView_intro_detail=0x7f0c0073;
         public static final int textView_useEmailText=0x7f0c0077;

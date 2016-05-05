@@ -6,4 +6,6 @@ package com.bookpal.utility;
 public interface AppConstants {
 
     String PREF_KEY_IS_LOGGED_IN = "isLoggedIn";
+
+    String GOOGLE_LOGIN_SERVER_CLIENT_ID = "802782527209-edc7ejsqkiq51j5cg3u7afgfcdhj6jce.apps.googleusercontent.com";
 }
