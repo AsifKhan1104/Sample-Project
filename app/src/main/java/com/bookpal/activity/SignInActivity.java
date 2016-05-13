@@ -100,7 +100,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
-            Log.e(TAG, acct.getDisplayName() + "--" + acct.getEmail() + "--" + acct.getIdToken());
+            Utility.showToastMessage(this, acct.getDisplayName() + "--" + acct.getEmail() + "--" + acct.getIdToken());
         } else {
             // Signed out, show unauthenticated UI.
         }
@@ -114,16 +114,13 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onConnected(Bundle bundle) {
-        Utility.showToastMessage(this, "connected");
     }
 
     @Override
     public void onConnectionSuspended(int i) {
-        Utility.showToastMessage(this, "connection suspended");
     }
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-        Utility.showToastMessage(this, "connection failed");
     }
 }
