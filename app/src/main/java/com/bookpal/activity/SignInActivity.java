@@ -38,7 +38,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(AppConstants.GOOGLE_LOGIN_SERVER_CLIENT_ID)
                 .requestEmail()
                 .build();
 
@@ -115,16 +114,16 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onConnected(Bundle bundle) {
-
+        Utility.showToastMessage(this, "connected");
     }
 
     @Override
     public void onConnectionSuspended(int i) {
-
+        Utility.showToastMessage(this, "connection suspended");
     }
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-
+        Utility.showToastMessage(this, "connection failed");
     }
 }
