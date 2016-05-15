@@ -47,7 +47,7 @@ MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudi
 	android:allowBackup
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:11:9-35
 	android:icon
-		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:12:9-42
 	android:theme
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:15:9-40
 activity#com.bookpal.activity.SplashActivity
