@@ -60,7 +60,7 @@
         android:layout_marginLeft="@dimen/margin_60"
         android:layout_marginRight="@dimen/margin_60"
         android:layout_marginTop="@dimen/margin_30"
-        android:background="@color/submit_btn_background"
+        android:background="@color/btn_background"
         android:text="@string/searchBook"
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
