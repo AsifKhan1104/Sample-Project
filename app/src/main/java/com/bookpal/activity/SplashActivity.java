@@ -8,6 +8,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.bookpal.R;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 
 public class SplashActivity extends AppCompatActivity implements Animation.AnimationListener {
     // Animation
@@ -20,6 +22,10 @@ public class SplashActivity extends AppCompatActivity implements Animation.Anima
         setContentView(R.layout.activity_splash);
 
         mImageView = (ImageView) findViewById(R.id.imageView_logo);
+
+        YoYo.with(Techniques.FadeIn)
+                .duration(1000)
+                .playOn(findViewById(R.id.imageView_logo));
         // load the animation
         mAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.splash_anim);
