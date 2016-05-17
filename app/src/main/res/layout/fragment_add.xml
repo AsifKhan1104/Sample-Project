@@ -8,7 +8,7 @@
     android:padding="@dimen/padding_10"
     tools:context="com.bookpal.fragment.AddFragment">
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_bookName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_authorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_isbn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_publishingYear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_language"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             android:textColorHint="@color/text_color_hint" />
     </RadioGroup>
 
-    <Button
+    <com.bookpal.uicomponent.CustomButton
         android:id="@+id/button_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

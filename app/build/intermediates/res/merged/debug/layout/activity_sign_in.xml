@@ -23,7 +23,7 @@
             android:layout_marginTop="@dimen/margin_60"
             android:background="@drawable/ic_launcher" />
 
-        <TextView
+        <com.bookpal.uicomponent.CustomTextView
             android:id="@+id/textView_intro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:textSize="@dimen/text_size_x_large"
             android:textStyle="bold" />
 
-        <TextView
+        <com.bookpal.uicomponent.CustomTextView
             android:id="@+id/textView_intro_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,14 +50,14 @@
         android:layout_marginTop="@dimen/margin_10"
         android:layout_weight="1">
 
-        <TextView
+        <com.bookpal.uicomponent.CustomTextView
             android:id="@+id/textView_fb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_10"
             android:background="@drawable/login_with_fb" />
 
-        <Button
+        <com.bookpal.uicomponent.CustomButton
             android:id="@+id/button_google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                 android:layout_height="1dp"
                 android:background="@color/colorBlack" />
 
-            <TextView
+            <com.bookpal.uicomponent.CustomTextView
                 android:id="@+id/textView_useEmailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,13 +100,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:weightSum="1"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/linearLayout_useEmail"
             android:layout_margin="@dimen/margin_10"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <Button
+            <com.bookpal.uicomponent.CustomButton
                 android:id="@+id/button_signUp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                 android:textColor="@color/text_color_signIn"
                 android:textStyle="bold" />
 
-            <Button
+            <com.bookpal.uicomponent.CustomButton
                 android:id="@+id/button_logIn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

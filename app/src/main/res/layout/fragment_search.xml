@@ -8,7 +8,7 @@
     android:padding="@dimen/padding_10"
     tools:context="com.bookpal.fragment.SearchFragment">
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_bookName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <TextView
+    <com.bookpal.uicomponent.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10"
@@ -26,7 +26,7 @@
         android:textColor="@color/text_color_hint"
         android:textStyle="bold" />
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_yourLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <TextView
+    <com.bookpal.uicomponent.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10"
@@ -44,7 +44,7 @@
         android:textColor="@color/text_color_hint"
         android:textStyle="bold" />
 
-    <EditText
+    <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_isbn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/text_color_hint" />
 
-    <Button
+    <com.bookpal.uicomponent.CustomButton
         android:id="@+id/button_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
