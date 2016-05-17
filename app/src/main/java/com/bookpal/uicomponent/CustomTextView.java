@@ -3,30 +3,41 @@ package com.bookpal.uicomponent;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.util.LruCache;
 import android.widget.TextView;
 
-import com.bookpal.utility.FontManager;
 
 public class CustomTextView extends TextView {
-    public CustomTextView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(context, attrs);
+
+    private final static String NAME = "FONTAWESOME";
+    private static LruCache<String, Typeface> sTypefaceCache = new LruCache<String, Typeface>(12);
+
+    public CustomTextView(Context context) {
+        super(context);
+        init();
+
     }
 
     public CustomTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
+        init();
     }
 
-    public CustomTextView(Context context) {
-        super(context);
-        init(context, null);
-    }
+    public void init() {
 
-    private void init(Context context, AttributeSet attrs) {
-        if (attrs != null) {
-            Typeface myTypeface = FontManager.getTypeface(context, FontManager.FONTAWESOME);
-            setTypeface(myTypeface);
+        Typeface typeface = sTypefaceCache.get(NAME);
+
+        if (typeface == null) {
+
+            typeface = Typeface.createFromAsset(getContext().getAssets(), "fontawesome-webfont.ttf");
+            sTypefaceCache.put(NAME, typeface);
+
         }
+
+        setTypeface(typeface);
+
     }
+
 }
+
+

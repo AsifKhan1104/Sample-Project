@@ -3,53 +3,41 @@ package com.bookpal.uicomponent;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.view.KeyEvent;
+import android.util.LruCache;
 import android.widget.EditText;
 
-import com.bookpal.utility.FontManager;
 
-
-/**
- * Created by asif on 30/12/14.
- */
 public class CustomEditText extends EditText {
-    private KeyImeChange keyImeChangeListener;
 
-    public CustomEditText(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        init(context, attrs);
+    private final static String NAME = "FONTAWESOME";
+    private static LruCache<String, Typeface> sTypefaceCache = new LruCache<String, Typeface>(12);
+
+    public CustomEditText(Context context) {
+        super(context);
+        init();
+
     }
 
     public CustomEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
+        init();
     }
 
-    public CustomEditText(Context context) {
-        super(context);
-        init(context, null);
-    }
+    public void init() {
 
-    public void setKeyImeChangeListener(KeyImeChange listener) {
-        keyImeChangeListener = listener;
-    }
+        Typeface typeface = sTypefaceCache.get(NAME);
 
-    @Override
-    public boolean onKeyPreIme(int keyCode, KeyEvent event) {
-        if (keyImeChangeListener != null) {
-            keyImeChangeListener.onKeyIme(keyCode, event);
+        if (typeface == null) {
+
+            typeface = Typeface.createFromAsset(getContext().getAssets(), "fontawesome-webfont.ttf");
+            sTypefaceCache.put(NAME, typeface);
+
         }
-        return false;
+
+        setTypeface(typeface);
+
     }
 
-    private void init(Context context, AttributeSet attrs) {
-        if (attrs != null) {
-            Typeface myTypeface = FontManager.getTypeface(context, FontManager.FONTAWESOME);
-            setTypeface(myTypeface);
-        }
-    }
-
-    public interface KeyImeChange {
-        public void onKeyIme(int keyCode, KeyEvent event);
-    }
 }
+
+
