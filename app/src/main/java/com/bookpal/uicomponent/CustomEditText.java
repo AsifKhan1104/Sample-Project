@@ -9,34 +9,34 @@ import android.widget.EditText;
 
 public class CustomEditText extends EditText {
 
-    private final static String NAME = "FONTAWESOME";
-    private static LruCache<String, Typeface> sTypefaceCache = new LruCache<String, Typeface>(12);
+	private final static String NAME = "FONTAWESOME";
+	private static LruCache<String, Typeface> sTypefaceCache = new LruCache<String, Typeface>(12);
 
-    public CustomEditText(Context context) {
-        super(context);
-        init();
+	public CustomEditText(Context context) {
+		super(context);
+		init();
 
-    }
+	}
 
-    public CustomEditText(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
-    }
+	public CustomEditText(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		init();
+	}
 
-    public void init() {
+	public void init() {
 
-        Typeface typeface = sTypefaceCache.get(NAME);
+		Typeface typeface = sTypefaceCache.get(NAME);
 
-        if (typeface == null) {
+		if (typeface == null) {
 
-            typeface = Typeface.createFromAsset(getContext().getAssets(), "fontawesome-webfont.ttf");
-            sTypefaceCache.put(NAME, typeface);
+			typeface = Typeface.createFromAsset(getContext().getAssets(), "fontawesome-webfont.ttf");
+			sTypefaceCache.put(NAME, typeface);
 
-        }
+		}
 
-        setTypeface(typeface);
+		setTypeface(typeface);
 
-    }
+	}
 
 }
 
