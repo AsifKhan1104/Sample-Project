@@ -57,4 +57,12 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="no_internet_connection">No Network connectivity. Check your internet connection</string>
+
+    <string name="msg_image_not_uploaded">Please try again, unable to upload image</string>
+    <string name="msg_image_not_deleted">Please try again, unable to delete image</string>
+    <string name="msg_401">Session expired. Please login again to continue</string>
+    <string name="msg_404">Unable to send request to server. Please try again later.</string>
+    <string name="msg_4xx">Something happened. Please login again to continue</string>
+    <string name="msg_5xx">Oops!! Something happened. Please try again</string>
 </resources>

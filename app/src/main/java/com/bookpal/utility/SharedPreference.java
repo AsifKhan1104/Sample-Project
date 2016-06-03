@@ -70,22 +70,14 @@ public class SharedPreference {
         preferences.edit().clear().commit();
     }
 
-    /*public static void clearLoggedInInfo(Context context) {
-        LocalyticsUtils.updateCustomDimensionRegistrationStatus(context);
+    public static void clearLoggedInInfo(Context context) {
 
         SharedPreference.setBoolean(context, AppConstants.PREF_KEY_IS_LOGGED_IN, false);
-        SharedPreference.setString(context, AppConstants.PREF_KEY_ACCESS_TOKEN, "");
-        SharedPreference.setString(context, AppConstants.PREF_KEY_EMAIL_ID, "");
-        SharedPreference.setString(context, AppConstants.PREF_KEY_USER_ROLE, "");
-        SharedPreference.setString(context, AppConstants.PREF_KEY_USER_ID, "");
         SharedPreference.setBoolean(context, AppConstants.PREF_KEY_IS_ACCOUNT_VERIFIED, false);
-        SharedPreference.setString(context, AppConstants.PREF_KEY_FAME_NAME, "");
-        SharedPreference.setString(context, AppConstants.PREF_KEY_USER_IMAGE_NAME, "");
-        SharedPreference.setString(context, AppConstants.PREF_KEY_TWITTER_ACCESS_TOKEN, "");
-        SharedPreference.setString(context, AppConstants.PREF_KEY_TWITTER_TOKEN_SECRET, "");
-        SharedPreference.setInt(context, AppConstants.PREF_KEY_NOTIFICATION_COUNT, 0);
-
-    }*/
+        /*SharedPreference.setString(context, AppConstants.PREF_KEY_ACCESS_TOKEN, "");
+        SharedPreference.setString(context, AppConstants.PREF_KEY_EMAIL_ID, "");
+        SharedPreference.setString(context, AppConstants.PREF_KEY_USER_ID, "");*/
+    }
 
     /*public static void updateLoggedInInfo(Context context, Login login, String medium) {
         LocalyticsUtils.updateCustomDimensionRegistrationStatus(context);
