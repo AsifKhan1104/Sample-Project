@@ -15,7 +15,7 @@
         android:layout_marginBottom="@dimen/margin_10"
         android:hint="@string/hintBookName"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomTextView
@@ -33,7 +33,7 @@
         android:layout_marginBottom="@dimen/margin_10"
         android:hint="@string/hintLocation"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomTextView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/hintISBNOrAuthor"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomButton

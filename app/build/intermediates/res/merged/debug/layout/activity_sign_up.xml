@@ -15,7 +15,7 @@
         android:layout_marginBottom="@dimen/margin_15"
         android:hint="@string/hintFullName"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomEditText
@@ -25,7 +25,7 @@
         android:layout_marginBottom="@dimen/margin_15"
         android:hint="@string/hintMobile"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomEditText
@@ -35,7 +35,7 @@
         android:layout_marginBottom="@dimen/margin_15"
         android:hint="@string/hintEmail"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomEditText
@@ -45,7 +45,7 @@
         android:layout_marginBottom="@dimen/margin_15"
         android:hint="@string/hintPwd"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomEditText
@@ -55,7 +55,7 @@
         android:layout_marginBottom="@dimen/margin_60"
         android:hint="@string/hintYourLocation"
         android:padding="@dimen/padding_10"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/text_color"
         android:textColorHint="@color/text_color_hint" />
 
     <com.bookpal.uicomponent.CustomButton

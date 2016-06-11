@@ -10,6 +10,7 @@
     <color name="text_color_signIn">#7f7f7f</color>
     <color name="bg_color_signIn">#e3e3e2</color>
     <color name="text_color_hint">#606468</color>
+    <color name="text_color">#606468</color>
     <color name="edit_text_color_background">#3b4148</color>
     <color name="btn_background">#303030</color>
 </resources>
