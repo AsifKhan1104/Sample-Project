@@ -26,6 +26,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.bookpal.activity.SplashActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,16 +36,20 @@
         </activity>
         <activity
             android:name="com.bookpal.activity.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.bookpal.activity.SignInActivity"
-            android:label="@string/login_with" />
+            android:label="@string/login_with"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.bookpal.activity.SignUpActivity"
-            android:label="@string/register" />
+            android:label="@string/register"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.bookpal.activity.ManualSignInActivity"
-            android:label="@string/login" />
+            android:label="@string/login"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
