@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.bookpal.R;
+import com.bookpal.utility.GPSTracker;
 import com.bookpal.utility.Utility;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +23,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private EditText mEditTextEmail, mEditTextPassword;
     private Button mButtonRegister;
     private static final String TAG = "SignUpActivity";
+    private GPSTracker gps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_sign_up);
 
         linkViewId();
+        gps = new GPSTracker(this);
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -77,7 +80,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
-                                Utility.showToastMessage(SignUpActivity.this, "New Account created successfully");
+                                Utility.showToastMessage(SignUpActivity.this, "New Account created successfully" + "-" + gps.getLatitude() + "--" + gps.getLongitude());
 
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the

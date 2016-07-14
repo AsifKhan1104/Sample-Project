@@ -10,37 +10,29 @@
 
     <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_email"
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_15"
         android:hint="@string/hintEmail"
-        android:inputType="textEmailAddress"
-        android:padding="@dimen/padding_10"
-        android:singleLine="true"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color_hint"/>
+        android:inputType="textEmailAddress"/>
 
     <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_password"
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintPwd"
-        android:padding="@dimen/padding_10"
-        android:singleLine="true"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color_hint"/>
+        android:hint="@string/hintPwd"/>
 
     <com.bookpal.uicomponent.CustomButton
         android:id="@+id/button_login"
+        style="@style/ButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_20"
         android:layout_marginRight="@dimen/margin_20"
         android:layout_marginTop="@dimen/margin_20"
-        android:background="@color/btn_background"
-        android:text="@string/login"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"/>
+        android:text="@string/login"/>
 </LinearLayout>
 

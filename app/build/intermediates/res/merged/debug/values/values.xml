@@ -373,6 +373,7 @@
     <string name="hintYourLocation">Your Location</string>
     <string name="intro1">Discover great books and share</string>
     <string name="intro2">with your friends</string>
+    <string name="label_ok">Ok</string>
     <string name="login">Login</string>
     <string name="login_with">Login With</string>
     <string name="msg_401">Session expired. Please login again to continue</string>
@@ -386,6 +387,8 @@
     <string name="no_internet_connection">No Network connectivity. Check your internet connection</string>
     <string name="or">OR</string>
     <string name="paperback">Paperback</string>
+    <string name="permission">Allow permissions to access all the functionalities of app.</string>
+    <string name="permission_denial_message">Please provide required permission to access the app.</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
@@ -1339,6 +1342,18 @@
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="ButtonStyle">
+        <item name="android:background">@color/btn_background</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="EditTextStyle">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
+        <item name="android:padding">@dimen/padding_10</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

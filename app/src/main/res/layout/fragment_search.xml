@@ -1,22 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_main"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="@dimen/padding_10"
-    tools:context="com.bookpal.fragment.SearchFragment">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_main"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="@dimen/padding_10"
+              tools:context="com.bookpal.fragment.SearchFragment">
 
     <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_bookName"
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10"
-        android:hint="@string/hintBookName"
-        android:padding="@dimen/padding_10"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color_hint" />
+        android:hint="@string/hintBookName"/>
 
     <com.bookpal.uicomponent.CustomTextView
         android:layout_width="wrap_content"
@@ -24,17 +22,15 @@
         android:layout_marginBottom="@dimen/margin_10"
         android:text="@string/or"
         android:textColor="@color/text_color_hint"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_yourLocation"
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10"
-        android:hint="@string/hintLocation"
-        android:padding="@dimen/padding_10"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color_hint" />
+        android:hint="@string/hintLocation"/>
 
     <com.bookpal.uicomponent.CustomTextView
         android:layout_width="wrap_content"
@@ -42,27 +38,23 @@
         android:layout_marginBottom="@dimen/margin_10"
         android:text="@string/or"
         android:textColor="@color/text_color_hint"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <com.bookpal.uicomponent.CustomEditText
         android:id="@+id/editText_isbn"
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hintISBNOrAuthor"
-        android:padding="@dimen/padding_10"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color_hint" />
+        android:hint="@string/hintISBNOrAuthor"/>
 
     <com.bookpal.uicomponent.CustomButton
         android:id="@+id/button_search"
+        style="@style/ButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_60"
         android:layout_marginRight="@dimen/margin_60"
         android:layout_marginTop="@dimen/margin_30"
-        android:background="@color/btn_background"
-        android:text="@string/searchBook"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold" />
+        android:text="@string/searchBook"/>
 </LinearLayout>
 
