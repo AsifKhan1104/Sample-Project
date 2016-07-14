@@ -1,43 +1,59 @@
 {
   "project_info": {
-    "project_id": "bookpal-1c552",
     "project_number": "802782527209",
-    "name": "BookPal"
+    "firebase_url": "https://bookpal-1c552.firebaseio.com",
+    "project_id": "bookpal-1c552",
+    "storage_bucket": "bookpal-1c552.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:802782527209:android:d5e7ad14721bf762",
-        "client_id": "android:com.bookpal",
-        "client_type": 1,
         "android_client_info": {
-          "package_name": "com.bookpal",
-          "certificate_hash": []
+          "package_name": "com.bookpal"
         }
       },
-      "oauth_client": [],
-      "api_key": [],
+      "oauth_client": [
+        {
+          "client_id": "802782527209-3ve9ank8pelubi2gf7c3kuu0avejv3f5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bookpal",
+            "certificate_hash": "9DE5DE6D7F159BA3E8097192993E738F88898695"
+          }
+        },
+        {
+          "client_id": "802782527209-lvrr23ht869un1qlcnfifmd05ijnf99u.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "802782527209-edc7ejsqkiq51j5cg3u7afgfcdhj6jce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAzWw7o5R9LXPTT9MSduicZ4tBpDl2-l4"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
         },
-        "cloud_messaging_service": {
-          "status": 1,
-          "apns_config": []
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "google_signin_service": {
-          "status": 1
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802782527209-lvrr23ht869un1qlcnfifmd05ijnf99u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
   ],
-  "client_info": [],
-  "ARTIFACT_VERSION": "1"
+  "configuration_version": "1"
 }
