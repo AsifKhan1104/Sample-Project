@@ -1,60 +1,73 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/bg_main"
-              android:gravity="center"
-              android:orientation="vertical"
-              android:padding="@dimen/padding_10"
-              tools:context="com.bookpal.activity.SignUpActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_main">
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_fullName"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintFullName"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_mobile"
-        style="@style/EditTextStyle"
+    <LinearLayout
+        android:id="@+id/linearLayout_Main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintMobile"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10"
+        tools:context="com.bookpal.activity.SignUpActivity">
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_email"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintEmail"/>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_fullName"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintFullName"/>
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_password"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintPwd"/>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_mobile"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintMobile"/>
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_location"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_60"
-        android:hint="@string/hintYourLocation"/>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_email"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintEmail"/>
 
-    <com.bookpal.uicomponent.CustomButton
-        android:id="@+id/button_register"
-        style="@style/ButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_20"
-        android:layout_marginRight="@dimen/margin_20"
-        android:text="@string/register"/>
-</LinearLayout>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_password"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_60"
+            android:hint="@string/hintPwd"/>
 
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_location"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_60"
+            android:hint="@string/hintYourLocation"
+            android:visibility="gone"/>
+
+        <com.bookpal.uicomponent.CustomButton
+            android:id="@+id/button_register"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:text="@string/register"/>
+    </LinearLayout>
+</RelativeLayout>

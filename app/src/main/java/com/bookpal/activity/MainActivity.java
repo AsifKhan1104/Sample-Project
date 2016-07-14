@@ -1,7 +1,11 @@
 package com.bookpal.activity;
 
+import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,10 +20,14 @@ import android.view.MenuItem;
 import com.bookpal.R;
 import com.bookpal.fragment.AddFragment;
 import com.bookpal.fragment.SearchFragment;
+import com.bookpal.utility.MarshMallowUtils;
 import com.bookpal.utility.Utility;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static final int REQUEST_CODE_PERMISSIONS = 102;
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
@@ -33,6 +41,31 @@ public class MainActivity extends AppCompatActivity
 
         linkViewId();
         openDefaultFragment();
+
+        // To check multiple permission call (for marshmallow permission system)
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put(" Access Course Location", Manifest.permission.ACCESS_COARSE_LOCATION);
+        hashMap.put(" Access Fine Location", Manifest.permission.ACCESS_FINE_LOCATION);
+        if (MarshMallowUtils.checkForMultiplePermissionsToGrant(this, hashMap).size() != 0) {
+            MarshMallowUtils.requestPermission(this, hashMap, REQUEST_CODE_PERMISSIONS);
+        }
+    }
+
+    //put the callback(if needed) on request for permission (allowed or denied)
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_CODE_PERMISSIONS && grantResults.length == 1) {
+            //do your code here
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                MarshMallowUtils.showDialog(this, getString(R.string.permission_denial_message), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+            }
+        }
     }
 
     private void openDefaultFragment() {
