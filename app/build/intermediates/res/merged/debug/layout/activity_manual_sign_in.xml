@@ -1,38 +1,50 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/bg_main"
-              android:gravity="center"
-              android:orientation="vertical"
-              android:padding="@dimen/padding_10"
-              tools:context="com.bookpal.activity.ManualSignInActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_main">
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_email"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintEmail"
-        android:inputType="textEmailAddress"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_password"
-        style="@style/EditTextStyle"
+    <LinearLayout
+        android:id="@+id/linearLayout_Main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintPwd"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10"
+        tools:context="com.bookpal.activity.ManualSignInActivity">
 
-    <com.bookpal.uicomponent.CustomButton
-        android:id="@+id/button_login"
-        style="@style/ButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_20"
-        android:layout_marginRight="@dimen/margin_20"
-        android:layout_marginTop="@dimen/margin_20"
-        android:text="@string/login"/>
-</LinearLayout>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_email"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintEmail"
+            android:inputType="textEmailAddress"/>
 
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/editText_password"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintPwd"/>
+
+        <com.bookpal.uicomponent.CustomButton
+            android:id="@+id/button_login"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/login"/>
+    </LinearLayout>
+</RelativeLayout>
