@@ -1,5 +1,6 @@
 package com.bookpal.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,6 +16,7 @@ import com.bookpal.R;
 import com.bookpal.model.Registration;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.GPSTracker;
+import com.bookpal.utility.SharedPreference;
 import com.bookpal.utility.Utility;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -36,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private static final String TAG = "SignUpActivity";
     private GPSTracker gps;
     private DatabaseReference mDatabase;
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_sign_up);
 
         linkViewId();
+        mContext = SignUpActivity.this;
         gps = new GPSTracker(this);
         // Get firebase database instance to read / write data
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -55,11 +59,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Utility.setLoggedIn(SignUpActivity.this);
+                    Utility.setLoggedIn(mContext);
                     // save data in firebase database
                     writeNewUser(user.getUid());
+                    // save user's data to SharedPreference also
+                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString(), user.getUid(), mEditTextMobile.getText().toString(), user.getEmail(), String.valueOf(gps.getLatitude()), String.valueOf(gps.getLatitude()));
 
-                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    Intent intent = new Intent(mContext, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN, AppConstants.FLAG_YES);
@@ -117,7 +123,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                         // the auth state listener will be notified and logic to handle the
                                         // signed in user can be handled in the listener.
                                         if (!task.isSuccessful()) {
-                                            Utility.showToastMessage(SignUpActivity.this, task.getException().getMessage());
+                                            Utility.showToastMessage(mContext, task.getException().getMessage());
                                         }
                                     }
                                 });

@@ -14,4 +14,12 @@ public interface AppConstants {
     String FROM_SIGN_UP_OR_SIGN_IN = "fromSignUpOrSignIn";
 
     String FLAG_YES = "yes";
+
+    //user's data
+    String USER_NAME = "user_name";
+    String USER_ID = "user_id";
+    String USER_MOBILE = "user_mobile";
+    String USER_EMAIL = "user_email";
+    String USER_LAT = "user_lat";
+    String USER_LONG = "user_long";
 }

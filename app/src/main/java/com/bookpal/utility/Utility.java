@@ -229,4 +229,13 @@ public class Utility {
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnected();
     }
+
+    public static void saveUserDataToSharedPreference(Context context, String userName, String uid, String userMobile, String userEmail, String userLat, String userLong) {
+        SharedPreference.setString(context, AppConstants.USER_NAME, userName);
+        SharedPreference.setString(context, AppConstants.USER_ID, uid);
+        SharedPreference.setString(context, AppConstants.USER_MOBILE, userMobile);
+        SharedPreference.setString(context, AppConstants.USER_EMAIL, userEmail);
+        SharedPreference.setString(context, AppConstants.USER_LAT, userLat);
+        SharedPreference.setString(context, AppConstants.USER_LONG, userLong);
+    }
 }

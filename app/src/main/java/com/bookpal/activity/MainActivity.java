@@ -23,6 +23,7 @@ import com.bookpal.fragment.AddFragment;
 import com.bookpal.fragment.SearchFragment;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.MarshMallowUtils;
+import com.bookpal.utility.SharedPreference;
 import com.bookpal.utility.Utility;
 
 import java.util.HashMap;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity
         String flag = getIntent().getStringExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN);
         if (flag != null && flag.equals(AppConstants.FLAG_YES)) {
             openAddFragment();
+            // set name & email in navigation header
+            mTextViewNavHeaderUserName.setText(SharedPreference.getString(this, AppConstants.USER_NAME));
+            mTextViewNavHeaderEmail.setText(SharedPreference.getString(this, AppConstants.USER_EMAIL));
         } else {
             openSearchFragment();
         }
