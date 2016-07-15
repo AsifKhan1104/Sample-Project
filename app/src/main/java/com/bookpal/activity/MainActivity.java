@@ -106,6 +106,10 @@ public class MainActivity extends AppCompatActivity
         mTextViewNavHeaderUserName = (TextView) findViewById(R.id.nav_header_userName);
         mTextViewNavHeaderEmail = (TextView) findViewById(R.id.nav_header_email);
 
+        // set name & email in navigation header
+        mTextViewNavHeaderUserName.setText(SharedPreference.getString(this, AppConstants.USER_NAME));
+        mTextViewNavHeaderEmail.setText(SharedPreference.getString(this, AppConstants.USER_EMAIL));
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mActionBarDrawerToggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
