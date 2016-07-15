@@ -1,6 +1,6 @@
 package com.bookpal.activity;
 
-import android.location.Location;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.bookpal.R;
+import com.bookpal.model.Registration;
+import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.GPSTracker;
 import com.bookpal.utility.Utility;
 import com.daimajia.androidanimations.library.Techniques;
@@ -21,17 +23,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private EditText mEditTextFullName, mEditTextMobile, mEditTextEmail, mEditTextPassword, mEditTextLocation;
+    private EditText mEditTextName, mEditTextMobile, mEditTextEmail, mEditTextPassword, mEditTextLocation;
     private Button mButtonRegister;
     private LinearLayout mLinearLayoutMain;
     private ProgressBar mProgressBar;
     private static final String TAG = "SignUpActivity";
     private GPSTracker gps;
-
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         linkViewId();
         gps = new GPSTracker(this);
+        // Get firebase database instance to read / write data
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        // Get firebase auth object for creating new user
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -48,7 +55,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Log.e(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Utility.setLoggedIn(SignUpActivity.this);
+                    // save data in firebase database
+                    writeNewUser(user.getUid());
+
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra(AppConstants.FROM_SIGN_UP, AppConstants.FLAG_YES);
+                    startActivity(intent);
                 } else {
                     // User is signed out
                     Log.e(TAG, "onAuthStateChanged:signed_out");
@@ -58,7 +73,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void linkViewId() {
-        mEditTextFullName = (EditText) findViewById(R.id.editText_fullName);
+        mEditTextName = (EditText) findViewById(R.id.editText_Name);
         mEditTextMobile = (EditText) findViewById(R.id.editText_mobile);
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
@@ -127,5 +142,19 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return true;
         }
         return false;
+    }
+
+    // writes new data to firebase database
+    private void writeNewUser(String userId) {
+        Registration registrationData = new Registration();
+        registrationData.setName(mEditTextName.getText().toString());
+        registrationData.setUserId(userId);
+        registrationData.setMobile(mEditTextMobile.getText().toString());
+        registrationData.setEmail(mEditTextEmail.getText().toString());
+        registrationData.setPassword(mEditTextPassword.getText().toString());
+        registrationData.setLatitude(String.valueOf(gps.getLatitude()));
+        registrationData.setLongitude(String.valueOf(gps.getLongitude()));
+
+        mDatabase.child("users").child(userId).child("registration").setValue(registrationData);
     }
 }

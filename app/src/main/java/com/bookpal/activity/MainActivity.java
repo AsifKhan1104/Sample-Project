@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import com.bookpal.R;
 import com.bookpal.fragment.AddFragment;
 import com.bookpal.fragment.SearchFragment;
+import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.MarshMallowUtils;
 import com.bookpal.utility.Utility;
 
@@ -40,7 +41,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         linkViewId();
-        openDefaultFragment();
+        String flag = getIntent().getStringExtra(AppConstants.FROM_SIGN_UP);
+        if (flag != null && flag.equals(AppConstants.FLAG_YES)) {
+            openAddFragment();
+        } else {
+            openSearchFragment();
+        }
 
         // To check multiple permission call (for marshmallow permission system)
         HashMap<String, String> hashMap = new HashMap<>();
@@ -68,9 +74,21 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private void openDefaultFragment() {
+    private void openSearchFragment() {
+        mNavigationView.getMenu().getItem(0).setChecked(true);
+
         Fragment fragment = (Fragment) SearchFragment.newInstance();
         setTitle(getString(R.string.findBook));
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+    }
+
+    private void openAddFragment() {
+        mNavigationView.getMenu().getItem(1).setChecked(true);
+
+        Fragment fragment = (Fragment) AddFragment.newInstance();
+        setTitle(getString(R.string.addBook));
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();

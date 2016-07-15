@@ -10,4 +10,9 @@ public interface AppConstants {
     String PREF_KEY_ACCESS_TOKEN = "accessToken";
 
     String GOOGLE_LOGIN_SERVER_CLIENT_ID = "802782527209-edc7ejsqkiq51j5cg3u7afgfcdhj6jce.apps.googleusercontent.com";
+
+    String FROM_SIGN_UP = "fromSignUp";
+    String FROM_SIGN_IN = "fromSignIn";
+
+    String FLAG_YES = "yes";
 }

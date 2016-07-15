@@ -40,6 +40,10 @@ public class Utility {
         return SharedPreference.getBoolean(context, AppConstants.PREF_KEY_IS_LOGGED_IN);
     }
 
+    public static void setLoggedIn(Context context) {
+        SharedPreference.setBoolean(context, AppConstants.PREF_KEY_IS_LOGGED_IN, true);
+    }
+
     public static void showToastMessage(Context context, String msg) {
         Toast.makeText(context, msg + "", Toast.LENGTH_SHORT).show();
     }

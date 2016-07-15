@@ -21,12 +21,12 @@
         tools:context="com.bookpal.activity.SignUpActivity">
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_fullName"
+            android:id="@+id/editText_Name"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintFullName"/>
+            android:hint="@string/hintName"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_mobile"

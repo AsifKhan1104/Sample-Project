@@ -27,7 +27,7 @@
     <string name="intro2">with your friends</string>
     <string name="useEmailText">OR USE YOUR EMAIL ADDRESS</string>
 
-    <string name="hintFullName">Fullname</string>
+    <string name="hintName">Name</string>
     <string name="hintMobile">Mobile</string>
     <string name="hintEmail">Email</string>
     <string name="hintPwd">Password</string>

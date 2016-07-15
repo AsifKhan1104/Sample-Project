@@ -362,12 +362,12 @@
     <string name="hintAuthor">Author Name</string>
     <string name="hintBookName">Book Name</string>
     <string name="hintEmail">Email</string>
-    <string name="hintFullName">Fullname</string>
     <string name="hintISBN">ISBN No (optional)</string>
     <string name="hintISBNOrAuthor">ISBN No / Author Name</string>
     <string name="hintLanguage">Language</string>
     <string name="hintLocation">Your Location Preference</string>
     <string name="hintMobile">Mobile</string>
+    <string name="hintName">Name</string>
     <string name="hintPublishingYear">Publishing Year</string>
     <string name="hintPwd">Password</string>
     <string name="hintYourLocation">Your Location</string>
