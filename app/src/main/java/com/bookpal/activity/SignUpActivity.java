@@ -105,15 +105,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.button_register:
                 if (Utility.isNetworkConnected(this)) {
                     if (checkValidation()) {
-                        mLinearLayoutMain.setVisibility(View.GONE);
-                        mProgressBar.setVisibility(View.VISIBLE);
+                        showProgressBar();
 
                         mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
-                                        mProgressBar.setVisibility(View.GONE);
-                                        mLinearLayoutMain.setVisibility(View.VISIBLE);
+                                        hideProgressBar();
 
                                         // If sign in fails, display a message to the user. If sign in succeeds
                                         // the auth state listener will be notified and logic to handle the
@@ -160,5 +158,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         registrationData.setLongitude(String.valueOf(gps.getLongitude()));
 
         mDatabase.child("users").child(userId).child("registration").setValue(registrationData);
+    }
+
+    private void showProgressBar() {
+        mLinearLayoutMain.setVisibility(View.GONE);
+        mProgressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar() {
+        mProgressBar.setVisibility(View.GONE);
+        mLinearLayoutMain.setVisibility(View.VISIBLE);
     }
 }
