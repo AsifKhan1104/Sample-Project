@@ -103,35 +103,39 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_register:
-                if (checkValidation()) {
-                    mLinearLayoutMain.setVisibility(View.GONE);
-                    mProgressBar.setVisibility(View.VISIBLE);
+                if (Utility.isNetworkConnected(this)) {
+                    if (checkValidation()) {
+                        mLinearLayoutMain.setVisibility(View.GONE);
+                        mProgressBar.setVisibility(View.VISIBLE);
 
-                    mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
-                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    mProgressBar.setVisibility(View.GONE);
-                                    mLinearLayoutMain.setVisibility(View.VISIBLE);
+                        mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
+                                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        mProgressBar.setVisibility(View.GONE);
+                                        mLinearLayoutMain.setVisibility(View.VISIBLE);
 
-                                    // If sign in fails, display a message to the user. If sign in succeeds
-                                    // the auth state listener will be notified and logic to handle the
-                                    // signed in user can be handled in the listener.
-                                    if (!task.isSuccessful()) {
-                                        Utility.showToastMessage(SignUpActivity.this, task.getException().getMessage());
+                                        // If sign in fails, display a message to the user. If sign in succeeds
+                                        // the auth state listener will be notified and logic to handle the
+                                        // signed in user can be handled in the listener.
+                                        if (!task.isSuccessful()) {
+                                            Utility.showToastMessage(SignUpActivity.this, task.getException().getMessage());
+                                        }
                                     }
-                                }
-                            });
-                } else if (!(mEditTextEmail.getText().length() > 0)) {
-                    Utility.showToastMessage(this, "Please enter Email id to complete the registration");
-                    YoYo.with(Techniques.Shake)
-                            .duration(700)
-                            .playOn(mEditTextEmail);
-                } else if (!(mEditTextPassword.getText().length() > 0)) {
-                    Utility.showToastMessage(this, "Please enter Password to complete the registration");
-                    YoYo.with(Techniques.Shake)
-                            .duration(700)
-                            .playOn(mEditTextPassword);
+                                });
+                    } else if (!(mEditTextEmail.getText().length() > 0)) {
+                        Utility.showToastMessage(this, "Please enter Email id to complete the registration");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mEditTextEmail);
+                    } else if (!(mEditTextPassword.getText().length() > 0)) {
+                        Utility.showToastMessage(this, "Please enter Password to complete the registration");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mEditTextPassword);
+                    }
+                } else {
+                    Utility.showToastMessage(this, getResources().getString(R.string.no_internet_connection));
                 }
                 break;
         }

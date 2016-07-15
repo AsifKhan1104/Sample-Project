@@ -60,7 +60,7 @@
     <string name="permission">Allow permissions to access all the functionalities of app.</string>
     <string name="permission_denial_message">Please provide required permission to access the app.</string>
     <string name="label_ok">Ok</string>
-    <string name="no_internet_connection">No Network connectivity. Check your internet connection</string>
+    <string name="no_internet_connection">No Internet connectivity. Please check your internet connection and try again.</string>
 
     <string name="msg_image_not_uploaded">Please try again, unable to upload image</string>
     <string name="msg_image_not_deleted">Please try again, unable to delete image</string>
