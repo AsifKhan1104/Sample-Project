@@ -163,7 +163,15 @@ public class MainActivity extends AppCompatActivity
                 startActivityForResult(intent, REQUEST_CODE);
             }
         } else if (id == R.id.nav_share) {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT, "Here is the link for this amazing app - " + "https://play.google.com/store/apps/details?id=" + this.getPackageName());
 
+            try {
+                startActivity(Intent.createChooser(intent, "Select an action"));
+            } catch (android.content.ActivityNotFoundException ex) {
+                // (handle error)
+            }
         }
 
         mDrawerLayout.closeDrawer(GravityCompat.START);
