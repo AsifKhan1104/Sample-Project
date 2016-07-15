@@ -62,7 +62,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.putExtra(AppConstants.FROM_SIGN_UP, AppConstants.FLAG_YES);
+                    intent.putExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN, AppConstants.FLAG_YES);
                     startActivity(intent);
                 } else {
                     // User is signed out

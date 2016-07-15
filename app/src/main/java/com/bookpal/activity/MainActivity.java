@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.bookpal.R;
 import com.bookpal.fragment.AddFragment;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private NavigationView mNavigationView;
     private static int REQUEST_CODE = 11;
+    private TextView mTextViewNavHeaderUserName, mTextViewNavHeaderEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         linkViewId();
-        String flag = getIntent().getStringExtra(AppConstants.FROM_SIGN_UP);
+        String flag = getIntent().getStringExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN);
         if (flag != null && flag.equals(AppConstants.FLAG_YES)) {
             openAddFragment();
         } else {
@@ -97,6 +99,8 @@ public class MainActivity extends AppCompatActivity
     private void linkViewId() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+        mTextViewNavHeaderUserName = (TextView) findViewById(R.id.nav_header_userName);
+        mTextViewNavHeaderEmail = (TextView) findViewById(R.id.nav_header_email);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mActionBarDrawerToggle = new ActionBarDrawerToggle(
