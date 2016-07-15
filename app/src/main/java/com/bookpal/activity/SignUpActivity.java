@@ -65,11 +65,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     // save user's data to SharedPreference also
                     Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString(), user.getUid(), mEditTextMobile.getText().toString(), user.getEmail(), String.valueOf(gps.getLatitude()), String.valueOf(gps.getLatitude()));
 
-                    Intent intent = new Intent(mContext, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.putExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN, AppConstants.FLAG_YES);
-                    startActivity(intent);
+                    goToMainActivity();
                 } else {
                     // User is signed out
                     Log.e(TAG, "onAuthStateChanged:signed_out");
@@ -117,12 +113,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
-                                        hideProgressBar();
 
                                         // If sign in fails, display a message to the user. If sign in succeeds
                                         // the auth state listener will be notified and logic to handle the
                                         // signed in user can be handled in the listener.
                                         if (!task.isSuccessful()) {
+                                            hideProgressBar();
                                             Utility.showToastMessage(mContext, task.getException().getMessage());
                                         }
                                     }
@@ -174,5 +170,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);
         mLinearLayoutMain.setVisibility(View.VISIBLE);
+    }
+
+    private void goToMainActivity() {
+        Intent intent = new Intent(mContext, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN, AppConstants.FLAG_YES);
+        startActivity(intent);
     }
 }
