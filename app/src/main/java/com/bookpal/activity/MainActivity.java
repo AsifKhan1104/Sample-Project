@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.bookpal.R;
 import com.bookpal.fragment.AddFragment;
+import com.bookpal.fragment.MyBooksFragment;
 import com.bookpal.fragment.SearchFragment;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.MarshMallowUtils;
@@ -178,6 +179,9 @@ public class MainActivity extends AppCompatActivity
                 Intent intent = new Intent(mContext, SignInActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
             }
+        } else if (id == R.id.nav_my_books) {
+            fragment = (Fragment) MyBooksFragment.newInstance();
+            replaceFragment(fragment, getString(R.string.myBooks));
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");

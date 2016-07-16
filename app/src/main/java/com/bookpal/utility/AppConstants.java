@@ -26,4 +26,12 @@ public interface AppConstants {
 
     String TYPE_PAPERBACK = "Paperback";
     String TYPE_HARDCOVER = "Hardcover";
+
+    // book data
+    String BOOK_NAME = "bookName";
+    String AUTHOR_NAME = "authorName";
+    String ISBN = "isbn";
+    String PUBLISHING_YEAR = "publishingYear";
+    String LANGUAGE = "language";
+    String BOOK_TYPE = "bookType";
 }

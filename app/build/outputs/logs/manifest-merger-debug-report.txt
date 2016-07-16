@@ -42,6 +42,8 @@ MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudi
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.0.0] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-auth:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.2.1/AndroidManifest.xml:20:5-21:19
 MERGED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:20:5-24:19
@@ -218,6 +220,9 @@ MERGED from [com.android.support:design:23.0.1] /home/laukendra/AndroidStudioPro
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.0.0] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.0.0] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.daimajia.easing:library:1.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.daimajia.easing/library/1.0.1/AndroidManifest.xml:8:5-10:41
 MERGED from [com.daimajia.androidanimations:library:1.1.3] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.daimajia.androidanimations/library/1.1.3/AndroidManifest.xml:8:5-10:41
