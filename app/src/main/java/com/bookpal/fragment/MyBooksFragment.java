@@ -153,6 +153,12 @@ public class MyBooksFragment extends Fragment {
                         // add this object to list
                         list.add(addBook);
                     }
+
+                    // hide no data text view once data comes
+                    if (list.size() > 0) {
+                        mTextViewNoData.setVisibility(View.GONE);
+                    }
+
                     mRecyclerViewAdapter = new RecyclerViewAdapter_MyBooks(mContext, list);
                     mRecyclerView.setAdapter(mRecyclerViewAdapter);
                 } else {

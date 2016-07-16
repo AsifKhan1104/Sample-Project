@@ -397,7 +397,7 @@
     <string name="myBooks">My Books</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="no_book_added">No books added.\n Please add a book and increase your reading network.</string>
+    <string name="no_book_added">No books added. Please add a book and increase your reading network.</string>
     <string name="no_internet_connection">No Internet connectivity. Please check your internet connection and try again.</string>
     <string name="or">OR</string>
     <string name="paperback">Paperback</string>
