@@ -23,5 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_10"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_medium"
         android:visibility="gone"/>
 </RelativeLayout>

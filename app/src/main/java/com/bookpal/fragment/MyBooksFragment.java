@@ -115,7 +115,7 @@ public class MyBooksFragment extends Fragment {
 
                 List<AddBook> list = new ArrayList<AddBook>();
                 HashMap<String, HashMap<String, String>> hashMap = (HashMap<String, HashMap<String, String>>) dataSnapshot.getValue();
-                if (hashMap.size() > 0) {
+                if (hashMap != null && hashMap.size() > 0) {
                     Iterator entries = hashMap.entrySet().iterator();
                     while (entries.hasNext()) {
                         AddBook addBook = new AddBook();
