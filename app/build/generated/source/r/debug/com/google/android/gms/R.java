@@ -96,8 +96,8 @@ public final class R {
 		public static final int progressBar = 0x7f0c006e;
 		public static final int radio = 0x7f0c0057;
 		public static final int standard = 0x7f0c0038;
-		public static final int text = 0x7f0c009b;
-		public static final int text2 = 0x7f0c0099;
+		public static final int text = 0x7f0c009c;
+		public static final int text2 = 0x7f0c009a;
 		public static final int wide = 0x7f0c0039;
 		public static final int wrap_content = 0x7f0c003f;
 	}

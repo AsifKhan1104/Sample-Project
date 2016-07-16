@@ -1,13 +1,28 @@
 package com.bookpal.fragment;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
 
 import com.bookpal.R;
+import com.bookpal.model.AddBook;
+import com.bookpal.utility.AlertDialogFragment;
+import com.bookpal.utility.AppConstants;
+import com.bookpal.utility.SharedPreference;
+import com.bookpal.utility.Utility;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,7 +32,7 @@ import com.bookpal.R;
  * Use the {@link AddFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AddFragment extends Fragment {
+public class AddFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,6 +43,13 @@ public class AddFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private EditText mEditTextBookName, mEditTextAuthorName, mEditTextIsbn, mEditTextPublishingYear, mEditTextLanguage;
+    private Button mButtonAddBook;
+    private RadioGroup mRadioGroup;
+    private LinearLayout mLinearLayoutMain;
+    private ProgressBar mProgressBar;
+    private DatabaseReference mDatabase;
+    private Context mContext;
 
     public AddFragment() {
         // Required empty public constructor
@@ -52,6 +74,10 @@ public class AddFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mContext = getActivity();
+        // Get firebase database instance to read / write data
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -62,13 +88,65 @@ public class AddFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add, container, false);
+        View view = inflater.inflate(R.layout.fragment_add, container, false);
+        linkViewId(view);
+        return view;
+    }
+
+    private void linkViewId(View view) {
+        mEditTextBookName = (EditText) view.findViewById(R.id.editText_bookName);
+        mEditTextAuthorName = (EditText) view.findViewById(R.id.editText_authorName);
+        mEditTextIsbn = (EditText) view.findViewById(R.id.editText_isbn);
+        mEditTextPublishingYear = (EditText) view.findViewById(R.id.editText_publishingYear);
+        mEditTextLanguage = (EditText) view.findViewById(R.id.editText_language);
+        mRadioGroup = (RadioGroup) view.findViewById(R.id.radioGroup);
+        mLinearLayoutMain = (LinearLayout) view.findViewById(R.id.linearLayout_Main);
+        mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        mButtonAddBook = (Button) view.findViewById(R.id.button_add);
+
+        mButtonAddBook.setOnClickListener(this);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_add:
+                if (Utility.isNetworkConnected(mContext)) {
+                    if (checkValidation()) {
+                        showProgressBar();
+                        addNewBook(SharedPreference.getString(mContext, AppConstants.USER_ID));
+                    } else if (!(mEditTextBookName.getText().length() > 0)) {
+                        Utility.showToastMessage(mContext, "Please enter Book Name to add the book");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mEditTextBookName);
+                    } else if (!(mEditTextAuthorName.getText().length() > 0)) {
+                        Utility.showToastMessage(mContext, "Please enter Author Name to add the book");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mEditTextAuthorName);
+                    } else if (!(mEditTextPublishingYear.getText().length() > 0)) {
+                        Utility.showToastMessage(mContext, "Please enter Publishing Year to add the book");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mEditTextPublishingYear);
+                    } else if (!(mEditTextLanguage.getText().length() > 0)) {
+                        Utility.showToastMessage(mContext, "Please enter Language to add the book");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mEditTextLanguage);
+                    }
+                } else {
+                    Utility.showToastMessage(mContext, getResources().getString(R.string.no_internet_connection));
+                }
+                break;
         }
     }
 
@@ -85,5 +163,63 @@ public class AddFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    // add new book to user's firebase database
+    private void addNewBook(String userId) {
+        AddBook addBook = new AddBook();
+        addBook.setBookName(mEditTextBookName.getText().toString().trim());
+        addBook.setAuthorName(mEditTextAuthorName.getText().toString().trim());
+        addBook.setIsbn(mEditTextIsbn.getText().toString().trim());
+        addBook.setPublishingYear(mEditTextPublishingYear.getText().toString().trim());
+        addBook.setLanguage(mEditTextLanguage.getText().toString().trim());
+        if (mRadioGroup.getCheckedRadioButtonId() == R.id.radioButton_hardcover) {
+            addBook.setBookType(AppConstants.TYPE_HARDCOVER);
+        } else {
+            addBook.setBookType(AppConstants.TYPE_PAPERBACK);
+        }
+
+        int bookCount = SharedPreference.getInt(mContext, AppConstants.PREF_KEY_BOOK_COUNT);
+        mDatabase.child("users").child(userId).child("book_" + String.valueOf(bookCount)).setValue(addBook);
+        hideProgressBar();
+
+        // increase book count by 1
+        SharedPreference.setInt(mContext, AppConstants.PREF_KEY_BOOK_COUNT, bookCount + 1);
+
+        // show success dialog
+        AlertDialogFragment alertDialogFragment = new AlertDialogFragment();
+        alertDialogFragment.show(getFragmentManager(), getResources().getString(R.string.label_ok));
+
+        // clear all edit texts for next book details
+        clearAllEditTexts();
+    }
+
+    private void clearAllEditTexts() {
+        mEditTextBookName.setText("");
+        mEditTextAuthorName.setText("");
+        mEditTextIsbn.setText("");
+        mEditTextPublishingYear.setText("");
+        mEditTextLanguage.setText("");
+        mRadioGroup.check(R.id.radioButton_paperback);
+    }
+
+    private void showProgressBar() {
+        mLinearLayoutMain.setVisibility(View.GONE);
+        mProgressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar() {
+        mProgressBar.setVisibility(View.GONE);
+        mLinearLayoutMain.setVisibility(View.VISIBLE);
+    }
+
+    private boolean checkValidation() {
+        if (mEditTextBookName.getText().length() > 0 &&
+                mEditTextAuthorName.getText().length() > 0 &&
+                mEditTextPublishingYear.getText().length() > 0 &&
+                mEditTextLanguage.getText().length() > 0) {
+            return true;
+        }
+        return false;
     }
 }

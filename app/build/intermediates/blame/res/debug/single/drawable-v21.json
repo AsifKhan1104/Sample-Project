@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
-        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable-v21/ic_menu_gallery.xml"
-    },
-    {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_book.xml",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable-v21/ic_menu_book.xml"
+    },
+    {
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable-v21/ic_menu_gallery.xml"
     },
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_share.xml",
