@@ -180,7 +180,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         }
 
         int bookCount = SharedPreference.getInt(mContext, AppConstants.PREF_KEY_BOOK_COUNT);
-        mDatabase.child("users").child(userId).child("book_" + String.valueOf(bookCount)).setValue(addBook);
+        mDatabase.child("users").child(userId).child("books").child("book_" + String.valueOf(bookCount)).setValue(addBook);
         hideProgressBar();
 
         // increase book count by 1
