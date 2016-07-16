@@ -16,7 +16,6 @@ import com.bookpal.R;
 import com.bookpal.model.Registration;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.GPSTracker;
-import com.bookpal.utility.SharedPreference;
 import com.bookpal.utility.Utility;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -31,7 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private EditText mEditTextName, mEditTextMobile, mEditTextEmail, mEditTextPassword, mEditTextLocation;
+    private EditText mEditTextName, mEditTextMobile, mEditTextEmail, mEditTextPassword;
     private Button mButtonRegister;
     private LinearLayout mLinearLayoutMain;
     private ProgressBar mProgressBar;
@@ -63,7 +62,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     // save data in firebase database
                     writeNewUser(user.getUid());
                     // save user's data to SharedPreference also
-                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString(), user.getUid(), mEditTextMobile.getText().toString(), user.getEmail(), String.valueOf(gps.getLatitude()), String.valueOf(gps.getLatitude()));
+                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString().trim(), user.getUid(), mEditTextMobile.getText().toString().trim(), user.getEmail(), String.valueOf(gps.getLatitude()), String.valueOf(gps.getLatitude()));
 
                     goToMainActivity();
                 } else {
@@ -79,7 +78,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         mEditTextMobile = (EditText) findViewById(R.id.editText_mobile);
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
-        mEditTextLocation = (EditText) findViewById(R.id.editText_location);
         mButtonRegister = (Button) findViewById(R.id.button_register);
         mLinearLayoutMain = (LinearLayout) findViewById(R.id.linearLayout_Main);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -109,7 +107,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     if (checkValidation()) {
                         showProgressBar();
 
-                        mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
+                        mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString().trim(), mEditTextPassword.getText().toString().trim())
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -151,11 +149,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     // writes new data to firebase database
     private void writeNewUser(String userId) {
         Registration registrationData = new Registration();
-        registrationData.setName(mEditTextName.getText().toString());
+        registrationData.setName(mEditTextName.getText().toString().trim());
         registrationData.setUserId(userId);
-        registrationData.setMobile(mEditTextMobile.getText().toString());
-        registrationData.setEmail(mEditTextEmail.getText().toString());
-        registrationData.setPassword(mEditTextPassword.getText().toString());
+        registrationData.setMobile(mEditTextMobile.getText().toString().trim());
+        registrationData.setEmail(mEditTextEmail.getText().toString().trim());
+        registrationData.setPassword(mEditTextPassword.getText().toString().trim());
         registrationData.setLatitude(String.valueOf(gps.getLatitude()));
         registrationData.setLongitude(String.valueOf(gps.getLongitude()));
 

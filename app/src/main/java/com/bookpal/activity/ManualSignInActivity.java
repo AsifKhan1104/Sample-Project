@@ -109,7 +109,7 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
                     if (checkValidation()) {
                         showProgressBar();
 
-                        mAuth.signInWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
+                        mAuth.signInWithEmailAndPassword(mEditTextEmail.getText().toString().trim(), mEditTextPassword.getText().toString().trim())
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
