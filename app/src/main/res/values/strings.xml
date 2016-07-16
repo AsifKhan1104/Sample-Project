@@ -2,6 +2,7 @@
     <string name="app_name">BookPal</string>
     <string name="findBook">Find Book</string>
     <string name="addBook">Add New Book</string>
+    <string name="myBooks">My Books</string>
     <string name="action_about">About</string>
     <string name="searchBook">Search</string>
     <string name="or">OR</string>

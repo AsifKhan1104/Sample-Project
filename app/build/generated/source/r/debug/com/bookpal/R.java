@@ -2288,7 +2288,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int action0=0x7f0c0092;
-        public static final int action_about=0x7f0c00a2;
+        public static final int action_about=0x7f0c00a3;
         public static final int action_bar=0x7f0c005d;
         public static final int action_bar_activity_content=0x7f0c0000;
         public static final int action_bar_container=0x7f0c005c;
@@ -2384,8 +2384,9 @@ containing a value of this type.
         public static final int nav_add=0x7f0c00a0;
         public static final int nav_header_email=0x7f0c0091;
         public static final int nav_header_userName=0x7f0c0090;
+        public static final int nav_my_books=0x7f0c00a1;
         public static final int nav_search=0x7f0c009f;
-        public static final int nav_share=0x7f0c00a1;
+        public static final int nav_share=0x7f0c00a2;
         public static final int nav_view=0x7f0c006d;
         public static final int never=0x7f0c0035;
         public static final int none=0x7f0c000f;
@@ -2618,26 +2619,27 @@ containing a value of this type.
         public static final int msg_5xx=0x7f06005b;
         public static final int msg_image_not_deleted=0x7f06005c;
         public static final int msg_image_not_uploaded=0x7f06005d;
-        public static final int navigation_drawer_close=0x7f06005e;
-        public static final int navigation_drawer_open=0x7f06005f;
-        public static final int no_internet_connection=0x7f060060;
-        public static final int or=0x7f060061;
-        public static final int paperback=0x7f060062;
-        public static final int permission=0x7f060063;
-        public static final int permission_denial_message=0x7f060064;
-        public static final int permission_rationale=0x7f060065;
-        public static final int prompt_email=0x7f060066;
-        public static final int prompt_password=0x7f060067;
-        public static final int register=0x7f060068;
-        public static final int searchBook=0x7f060069;
-        public static final int signUp=0x7f06006a;
-        public static final int skip=0x7f06006b;
+        public static final int myBooks=0x7f06005e;
+        public static final int navigation_drawer_close=0x7f06005f;
+        public static final int navigation_drawer_open=0x7f060060;
+        public static final int no_internet_connection=0x7f060061;
+        public static final int or=0x7f060062;
+        public static final int paperback=0x7f060063;
+        public static final int permission=0x7f060064;
+        public static final int permission_denial_message=0x7f060065;
+        public static final int permission_rationale=0x7f060066;
+        public static final int prompt_email=0x7f060067;
+        public static final int prompt_password=0x7f060068;
+        public static final int register=0x7f060069;
+        public static final int searchBook=0x7f06006a;
+        public static final int signUp=0x7f06006b;
+        public static final int skip=0x7f06006c;
         public static final int status_bar_notification_info_overflow=0x7f060030;
-        public static final int submit=0x7f06006c;
-        public static final int title_activity_main=0x7f06006d;
-        public static final int title_activity_search=0x7f06006e;
-        public static final int title_activity_sign_in=0x7f06006f;
-        public static final int useEmailText=0x7f060070;
+        public static final int submit=0x7f06006d;
+        public static final int title_activity_main=0x7f06006e;
+        public static final int title_activity_search=0x7f06006f;
+        public static final int title_activity_sign_in=0x7f060070;
+        public static final int useEmailText=0x7f060071;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f08007c;

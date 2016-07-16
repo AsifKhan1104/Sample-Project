@@ -382,6 +382,7 @@
     <string name="msg_5xx">Oops!! Something happened. Please try again</string>
     <string name="msg_image_not_deleted">Please try again, unable to delete image</string>
     <string name="msg_image_not_uploaded">Please try again, unable to upload image</string>
+    <string name="myBooks">My Books</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="no_internet_connection">No Internet connectivity. Please check your internet connection and try again.</string>
