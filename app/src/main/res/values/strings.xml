@@ -71,4 +71,11 @@
     <string name="msg_404">Unable to send request to server. Please try again later.</string>
     <string name="msg_4xx">Something happened. Please login again to continue</string>
     <string name="msg_5xx">Oops!! Something happened. Please try again</string>
+
+    <string name="bookName">Book Name -</string>
+    <string name="authorName">Author Name -</string>
+    <string name="isbn">Isbn -</string>
+    <string name="publishingYear">Publishing Year -</string>
+    <string name="language">Language -</string>
+    <string name="bookType">Book Type -</string>
 </resources>
