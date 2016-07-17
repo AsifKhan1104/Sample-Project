@@ -26,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintName"/>
+            android:hint="@string/hintName"
+            android:inputType="textPersonName"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_mobile"
@@ -34,7 +35,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintMobile"/>
+            android:hint="@string/hintMobile"
+            android:inputType="number"
+            android:maxLength="10"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_email"
@@ -42,7 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintEmail"/>
+            android:hint="@string/hintEmail"
+            android:inputType="textEmailAddress"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_password"
@@ -50,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_60"
-            android:hint="@string/hintPwd"/>
+            android:hint="@string/hintPwd"
+            android:inputType="textVisiblePassword"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_location"
