@@ -35,11 +35,11 @@ public class RecyclerViewAdapter_MyBooks extends RecyclerView.Adapter<RecyclerVi
     @Override
     public void onBindViewHolder(RecyclerViewHolder_MyBooks holder, final int position) {
         holder.mTextViewBookName.setText(addedBooksList.get(position).getBookName());
-        holder.mTextViewAuthorName.setText(addedBooksList.get(position).getAuthorName());
-        holder.mTextViewIsbn.setText(addedBooksList.get(position).getIsbn());
-        holder.mTextViewPublishingYear.setText(addedBooksList.get(position).getPublishingYear());
-        holder.mTextViewLanguage.setText(addedBooksList.get(position).getLanguage());
-        holder.mTextViewBookType.setText(addedBooksList.get(position).getBookType());
+        holder.mTextViewAuthorName.setText("by " + addedBooksList.get(position).getAuthorName());
+        //holder.mTextViewIsbn.setText(addedBooksList.get(position).getIsbn());
+        holder.mTextViewPublishingYear.setText("publication year: " + addedBooksList.get(position).getPublishingYear());
+        //holder.mTextViewLanguage.setText(addedBooksList.get(position).getLanguage());
+        //holder.mTextViewBookType.setText(addedBooksList.get(position).getBookType());
     }
 
     @Override
