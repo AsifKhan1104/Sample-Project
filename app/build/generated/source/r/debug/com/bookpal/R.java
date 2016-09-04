@@ -2488,10 +2488,10 @@ containing a value of this type.
         public static final int editText_email=0x7f0c0071;
         public static final int editText_isbn=0x7f0c0090;
         public static final int editText_language=0x7f0c0092;
+        public static final int editText_locality=0x7f0c007f;
         public static final int editText_location=0x7f0c0080;
         public static final int editText_mobile=0x7f0c007e;
         public static final int editText_password=0x7f0c0072;
-        public static final int editText_pin_code=0x7f0c007f;
         public static final int editText_publishingYear=0x7f0c0091;
         public static final int editText_yourLocation=0x7f0c0099;
         public static final int edit_query=0x7f0c0060;

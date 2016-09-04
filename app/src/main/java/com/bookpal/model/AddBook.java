@@ -11,8 +11,17 @@ public class AddBook {
     private String publishingYear;
     private String language;
     private String bookType;
+    private String locality;
 
     public AddBook() {
+    }
+
+    public String getLocality() {
+        return locality;
+    }
+
+    public void setLocality(String locality) {
+        this.locality = locality;
     }
 
     public String getBookName() {

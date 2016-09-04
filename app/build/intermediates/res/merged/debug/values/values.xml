@@ -383,7 +383,7 @@
     <string name="hintLocation">Your Location Preference</string>
     <string name="hintMobile">Mobile</string>
     <string name="hintName">Name</string>
-    <string name="hintPinCode">Area Pincode</string>
+    <string name="hintPinCode">Area / Pincode</string>
     <string name="hintPublishingYear">Publishing Year</string>
     <string name="hintPwd">Password</string>
     <string name="hintYourLocation">Your Location</string>

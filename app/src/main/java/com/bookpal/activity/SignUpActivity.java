@@ -36,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private EditText mEditTextName, mEditTextMobile, mEditTextEmail, mEditTextPassword;
-    private AutoCompleteTextView mAutoCompleteTextViewPinCode;
+    private AutoCompleteTextView mAutoCompleteTextViewLocality;
     private Button mButtonRegister;
     private LinearLayout mLinearLayoutMain;
     private ProgressBar mProgressBar;
@@ -69,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     // save data in firebase database
                     writeNewUser(user.getUid());
                     // save user's data to SharedPreference also
-                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString().trim(), user.getUid(), mEditTextMobile.getText().toString().trim(), user.getEmail(), mAutoCompleteTextViewPinCode.getText().toString().trim());
+                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString().trim(), user.getUid(), mEditTextMobile.getText().toString().trim(), user.getEmail(), mAutoCompleteTextViewLocality.getText().toString().trim());
 
                     goToMainActivity();
                 } else {
@@ -89,9 +89,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         pincode.addAll(area);
 
+        // close database
+        dbAdapter.close();
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.select_dialog_item, pincode);
-        mAutoCompleteTextViewPinCode.setAdapter(adapter);
+        mAutoCompleteTextViewLocality.setAdapter(adapter);
     }
 
     private void linkViewId() {
@@ -99,7 +102,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         mEditTextMobile = (EditText) findViewById(R.id.editText_mobile);
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
-        mAutoCompleteTextViewPinCode = (AutoCompleteTextView) findViewById(R.id.editText_pin_code);
+        mAutoCompleteTextViewLocality = (AutoCompleteTextView) findViewById(R.id.editText_locality);
         mButtonRegister = (Button) findViewById(R.id.button_register);
         mLinearLayoutMain = (LinearLayout) findViewById(R.id.linearLayout_Main);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -153,11 +156,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         YoYo.with(Techniques.Shake)
                                 .duration(700)
                                 .playOn(mEditTextPassword);
-                    } else if (!(mAutoCompleteTextViewPinCode.getText().length() > 0)) {
+                    } else if (!(mAutoCompleteTextViewLocality.getText().length() > 0)) {
                         Utility.showToastMessage(this, "Please enter correct pincode to complete the registration");
                         YoYo.with(Techniques.Shake)
                                 .duration(700)
-                                .playOn(mAutoCompleteTextViewPinCode);
+                                .playOn(mAutoCompleteTextViewLocality);
                     }
                 } else {
                     Utility.showToastMessage(this, getResources().getString(R.string.no_internet_connection));
@@ -167,7 +170,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private boolean checkValidation() {
-        if (mEditTextEmail.getText().length() > 0 && mEditTextPassword.getText().length() > 0 && mAutoCompleteTextViewPinCode.getText().length() == 6) {
+        if (mEditTextEmail.getText().length() > 0 && mEditTextPassword.getText().length() > 0 && mAutoCompleteTextViewLocality.getText().length() > 0) {
             return true;
         }
         return false;
@@ -181,7 +184,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         registrationData.setMobile(mEditTextMobile.getText().toString().trim());
         registrationData.setEmail(mEditTextEmail.getText().toString().trim());
         registrationData.setPassword(mEditTextPassword.getText().toString().trim());
-        registrationData.setLocality(mAutoCompleteTextViewPinCode.getText().toString().trim());
+        registrationData.setLocality(mAutoCompleteTextViewLocality.getText().toString().trim());
 
         mDatabase.child("users").child(userId).child("registration").setValue(registrationData);
     }

@@ -58,7 +58,7 @@
             android:inputType="textVisiblePassword"/>
 
         <AutoCompleteTextView
-            android:id="@+id/editText_pin_code"
+            android:id="@+id/editText_locality"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

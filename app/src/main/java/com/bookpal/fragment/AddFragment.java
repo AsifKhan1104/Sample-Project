@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -14,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 
 import com.bookpal.R;
+import com.bookpal.database.DBAdapter;
 import com.bookpal.model.AddBook;
 import com.bookpal.utility.AlertDialogFragment;
 import com.bookpal.utility.AppConstants;
@@ -23,6 +26,8 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +55,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
     private ProgressBar mProgressBar;
     private DatabaseReference mDatabase;
     private Context mContext;
+    private AutoCompleteTextView mAutoCompleteTextViewLocality;
 
     public AddFragment() {
         // Required empty public constructor
@@ -90,7 +96,25 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add, container, false);
         linkViewId(view);
+        constructAutoCompleteTextViewData();
         return view;
+    }
+
+    private void constructAutoCompleteTextViewData() {
+        DBAdapter dbAdapter = new DBAdapter(mContext);
+        dbAdapter.open();
+
+        List<String> pincode = dbAdapter.GetPincodes();
+        List<String> area = dbAdapter.GetArea();
+
+        pincode.addAll(area);
+
+        // close database
+        dbAdapter.close();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>
+                (mContext, android.R.layout.select_dialog_item, pincode);
+        mAutoCompleteTextViewLocality.setAdapter(adapter);
     }
 
     private void linkViewId(View view) {
@@ -102,6 +126,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         mRadioGroup = (RadioGroup) view.findViewById(R.id.radioGroup);
         mLinearLayoutMain = (LinearLayout) view.findViewById(R.id.linearLayout_Main);
         mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        mAutoCompleteTextViewLocality = (AutoCompleteTextView) view.findViewById(R.id.editText_locality);
         mButtonAddBook = (Button) view.findViewById(R.id.button_add);
 
         mButtonAddBook.setOnClickListener(this);
@@ -142,6 +167,11 @@ public class AddFragment extends Fragment implements View.OnClickListener {
                         YoYo.with(Techniques.Shake)
                                 .duration(700)
                                 .playOn(mEditTextLanguage);
+                    } else if (!(mAutoCompleteTextViewLocality.getText().length() > 0)) {
+                        Utility.showToastMessage(mContext, "Please enter Locality to add the book");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mAutoCompleteTextViewLocality);
                     }
                 } else {
                     Utility.showToastMessage(mContext, getResources().getString(R.string.no_internet_connection));
@@ -173,6 +203,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         addBook.setIsbn(mEditTextIsbn.getText().toString().trim());
         addBook.setPublishingYear(mEditTextPublishingYear.getText().toString().trim());
         addBook.setLanguage(mEditTextLanguage.getText().toString().trim());
+        addBook.setLocality(mAutoCompleteTextViewLocality.getText().toString().trim());
         if (mRadioGroup.getCheckedRadioButtonId() == R.id.radioButton_hardcover) {
             addBook.setBookType(AppConstants.TYPE_HARDCOVER);
         } else {

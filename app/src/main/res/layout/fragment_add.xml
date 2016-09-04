@@ -65,6 +65,14 @@
             android:hint="@string/hintLanguage"
             android:inputType="text"/>
 
+        <AutoCompleteTextView
+            android:id="@+id/editText_locality"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintPinCode"/>
+
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"

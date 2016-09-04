@@ -727,10 +727,10 @@ int id editText_bookName 0x7f0c008e
 int id editText_email 0x7f0c0071
 int id editText_isbn 0x7f0c0090
 int id editText_language 0x7f0c0092
+int id editText_locality 0x7f0c007f
 int id editText_location 0x7f0c0080
 int id editText_mobile 0x7f0c007e
 int id editText_password 0x7f0c0072
-int id editText_pin_code 0x7f0c007f
 int id editText_publishingYear 0x7f0c0091
 int id editText_yourLocation 0x7f0c0099
 int id edit_query 0x7f0c0060
