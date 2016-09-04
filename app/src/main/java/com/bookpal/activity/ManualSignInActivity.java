@@ -72,7 +72,7 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Registration userData = dataSnapshot.getValue(Registration.class);
-                Utility.saveUserDataToSharedPreference(mContext, userData.getName(), userData.getUserId(), userData.getMobile(), userData.getEmail(), userData.getLatitude(), userData.getLongitude());
+                //Utility.saveUserDataToSharedPreference(mContext, userData.getName(), userData.getUserId(), userData.getMobile(), userData.getEmail(), userData.getLatitude(), userData.getLongitude());
                 goToMainActivity();
             }
 

@@ -53,9 +53,19 @@
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_60"
+            android:layout_marginBottom="@dimen/margin_15"
             android:hint="@string/hintPwd"
             android:inputType="textVisiblePassword"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/editText_pin_code"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_60"
+            android:hint="@string/hintPinCode"
+            android:inputType="number"
+            android:maxLength="6"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_location"

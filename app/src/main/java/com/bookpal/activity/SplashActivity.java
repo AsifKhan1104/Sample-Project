@@ -8,8 +8,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.bookpal.R;
+import com.bookpal.database.DBAdapter;
+import com.bookpal.utility.Utility;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+
+import java.io.IOException;
 
 public class SplashActivity extends AppCompatActivity implements Animation.AnimationListener {
     // Animation
@@ -20,6 +24,14 @@ public class SplashActivity extends AppCompatActivity implements Animation.Anima
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        // copy database from assets to internal db
+        try {
+            DBAdapter dbAdapter = new DBAdapter(this).open();
+            new Utility(this).copyDataBase();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
         mImageView = (ImageView) findViewById(R.id.imageView_logo);
 

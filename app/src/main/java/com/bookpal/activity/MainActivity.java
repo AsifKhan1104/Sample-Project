@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.bookpal.R;
+import com.bookpal.database.DBAdapter;
 import com.bookpal.fragment.AddFragment;
 import com.bookpal.fragment.MyBooksFragment;
 import com.bookpal.fragment.SearchFragment;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         linkViewId();
+
         String flag = getIntent().getStringExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN);
         if (flag != null && flag.equals(AppConstants.FLAG_YES)) {
             openAddFragment();
