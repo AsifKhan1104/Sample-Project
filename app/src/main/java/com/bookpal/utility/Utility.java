@@ -1,10 +1,8 @@
 package com.bookpal.utility;
 
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.bookpal.R;
@@ -233,12 +231,12 @@ public class Utility {
         return netInfo != null && netInfo.isConnected();
     }
 
-    public static void saveUserDataToSharedPreference(Context context, String userName, String uid, String userMobile, String userEmail, String userPinCode) {
+    public static void saveUserDataToSharedPreference(Context context, String userName, String uid, String userMobile, String userEmail, String userLocality) {
         SharedPreference.setString(context, AppConstants.USER_NAME, userName);
         SharedPreference.setString(context, AppConstants.USER_ID, uid);
         SharedPreference.setString(context, AppConstants.USER_MOBILE, userMobile);
         SharedPreference.setString(context, AppConstants.USER_EMAIL, userEmail);
-        SharedPreference.setString(context, AppConstants.USER_PINCODE, userPinCode);
+        SharedPreference.setString(context, AppConstants.USER_LOCALITY, userLocality);
     }
 
     public void copyDataBase() throws IOException {

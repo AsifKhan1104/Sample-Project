@@ -23,7 +23,7 @@ public interface AppConstants {
     String USER_EMAIL = "user_email";
     String USER_LAT = "user_lat";
     String USER_LONG = "user_long";
-    String USER_PINCODE = "user_pin_code";
+    String USER_LOCALITY = "user_locality";
 
     String TYPE_PAPERBACK = "Paperback";
     String TYPE_HARDCOVER = "Hardcover";

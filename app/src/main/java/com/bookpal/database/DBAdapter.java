@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Asif on 13-09-2015.
  */
@@ -81,16 +84,49 @@ public class DBAdapter {
         return objSQLiteDatabase.insert(TABLE_Favorite, null, initialValues);
     }*/
 
-    // Get Data
-    public Cursor GetData() {
+    // Get Pincode
+    public List<String> GetPincodes() {
         Cursor cursor = null;
         try {
             cursor = objSQLiteDatabase.rawQuery(
-                    "SELECT * FROM " + TABLE_Address, null);
+                    "SELECT pincode FROM " + TABLE_Address, null);
         } catch (Exception ex) {
             ex.printStackTrace();
             cursor.close();
         }
-        return cursor;
+
+        List<String> list = new ArrayList<>();
+
+        int i = 0;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            i++;
+            cursor.moveToNext();
+        }
+        return list;
+    }
+
+    // Get Area
+    public List<String> GetArea() {
+        Cursor cursor = null;
+        try {
+            cursor = objSQLiteDatabase.rawQuery(
+                    "SELECT area FROM " + TABLE_Address, null);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            cursor.close();
+        }
+
+        List<String> list = new ArrayList<>();
+
+        int i = 0;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            i++;
+            cursor.moveToNext();
+        }
+        return list;
     }
 }
