@@ -1,8 +1,14 @@
 *.iml
 .gradle
 /local.properties
-/.idea
+.idea
 .DS_Store
 /build
-/build/intermediates
 /captures
+facebook/build
+*.log
+app/src/main/assets/crashlytics-build.properties
+app/src/main/res/values/com_crashlytics_export_strings.xml
+atlassian-ide-plugin.xml
+/.navigation
+src/main/res/drawable/
