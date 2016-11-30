@@ -186,7 +186,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         registrationData.setPassword(mEditTextPassword.getText().toString().trim());
         registrationData.setLocality(mAutoCompleteTextViewLocality.getText().toString().trim());
 
-        mDatabase.child("users").child(userId).child("registration").setValue(registrationData);
+        mDatabase.child("users").child("registration").child(userId).setValue(registrationData);
     }
 
     private void showProgressBar() {

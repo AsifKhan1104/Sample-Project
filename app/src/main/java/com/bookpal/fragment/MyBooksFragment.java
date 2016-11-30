@@ -108,7 +108,7 @@ public class MyBooksFragment extends Fragment {
     private void fetchBookListFromServer() {
         String uid = SharedPreference.getString(mContext, AppConstants.USER_ID);
         showProgressBar();
-        mDatabaseReference.child("users").child(uid).child("books").addValueEventListener(new ValueEventListener() {
+        mDatabaseReference.child("users").child("books").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 hideProgressBar();

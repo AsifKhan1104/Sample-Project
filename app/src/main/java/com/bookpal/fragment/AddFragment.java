@@ -65,8 +65,6 @@ public class AddFragment extends Fragment implements View.OnClickListener {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment AddFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -211,7 +209,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         }
 
         int bookCount = SharedPreference.getInt(mContext, AppConstants.PREF_KEY_BOOK_COUNT);
-        mDatabase.child("users").child(userId).child("books").child("book_" + String.valueOf(bookCount)).setValue(addBook);
+        mDatabase.child("users").child("books").child(userId).child("book_" + String.valueOf(bookCount)).setValue(addBook);
         hideProgressBar();
 
         // increase book count by 1

@@ -68,7 +68,7 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void readAndSaveUserData(String uid) {
-        mDatabase.child("users").child(uid).child("registration").addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabase.child("users").child("registration").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Registration userData = dataSnapshot.getValue(Registration.class);
