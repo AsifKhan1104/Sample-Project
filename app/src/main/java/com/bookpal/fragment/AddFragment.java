@@ -116,15 +116,15 @@ public class AddFragment extends Fragment implements View.OnClickListener {
     }
 
     private void linkViewId(View view) {
-        mEditTextBookName = (EditText) view.findViewById(R.id.editText_bookName);
-        mEditTextAuthorName = (EditText) view.findViewById(R.id.editText_authorName);
-        mEditTextIsbn = (EditText) view.findViewById(R.id.editText_isbn);
-        mEditTextPublishingYear = (EditText) view.findViewById(R.id.editText_publishingYear);
-        mEditTextLanguage = (EditText) view.findViewById(R.id.editText_language);
+        mEditTextBookName = (EditText) view.findViewById(R.id.edittext_book_name);
+        mEditTextAuthorName = (EditText) view.findViewById(R.id.edittext_author_name);
+        mEditTextIsbn = (EditText) view.findViewById(R.id.edittext_isbn);
+        mEditTextPublishingYear = (EditText) view.findViewById(R.id.edittext_publishing_year);
+        mEditTextLanguage = (EditText) view.findViewById(R.id.edittext_language);
         mRadioGroup = (RadioGroup) view.findViewById(R.id.radioGroup);
-        mLinearLayoutMain = (LinearLayout) view.findViewById(R.id.linearLayout_Main);
-        mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
-        mAutoCompleteTextViewLocality = (AutoCompleteTextView) view.findViewById(R.id.editText_locality);
+        mLinearLayoutMain = (LinearLayout) view.findViewById(R.id.linear_layout_main);
+        mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+        mAutoCompleteTextViewLocality = (AutoCompleteTextView) view.findViewById(R.id.edittext_locality);
         mButtonAddBook = (Button) view.findViewById(R.id.button_add);
 
         mButtonAddBook.setOnClickListener(this);
@@ -202,7 +202,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         addBook.setPublishingYear(mEditTextPublishingYear.getText().toString().trim());
         addBook.setLanguage(mEditTextLanguage.getText().toString().trim());
         addBook.setLocality(mAutoCompleteTextViewLocality.getText().toString().trim());
-        if (mRadioGroup.getCheckedRadioButtonId() == R.id.radioButton_hardcover) {
+        if (mRadioGroup.getCheckedRadioButtonId() == R.id.radiobutton_hardcover) {
             addBook.setBookType(AppConstants.TYPE_HARDCOVER);
         } else {
             addBook.setBookType(AppConstants.TYPE_PAPERBACK);
@@ -230,7 +230,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         mEditTextIsbn.setText("");
         mEditTextPublishingYear.setText("");
         mEditTextLanguage.setText("");
-        mRadioGroup.check(R.id.radioButton_paperback);
+        mRadioGroup.check(R.id.radiobutton_paperback);
     }
 
     private void showProgressBar() {

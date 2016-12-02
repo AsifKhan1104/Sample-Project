@@ -102,10 +102,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         mEditTextMobile = (EditText) findViewById(R.id.editText_mobile);
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
-        mAutoCompleteTextViewLocality = (AutoCompleteTextView) findViewById(R.id.editText_locality);
+        mAutoCompleteTextViewLocality = (AutoCompleteTextView) findViewById(R.id.edittext_locality);
         mButtonRegister = (Button) findViewById(R.id.button_register);
-        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linearLayout_Main);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linear_layout_main);
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         mButtonRegister.setOnClickListener(this);
     }

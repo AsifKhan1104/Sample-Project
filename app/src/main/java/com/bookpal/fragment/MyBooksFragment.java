@@ -6,11 +6,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -20,7 +18,6 @@ import com.bookpal.model.AddBook;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.SharedPreference;
 import com.bookpal.utility.Utility;
-import com.google.firebase.auth.api.model.StringList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -92,7 +89,7 @@ public class MyBooksFragment extends Fragment {
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         lLayout = new LinearLayoutManager(mContext);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view_my_books);
-        mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         mTextViewNoData = (TextView) view.findViewById(R.id.textView_noData);
         mRecyclerView.setHasFixedSize(false);
         mRecyclerView.setLayoutManager(lLayout);

@@ -9,7 +9,7 @@
               tools:context="com.bookpal.fragment.SearchFragment">
 
     <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_bookName"
+        android:id="@+id/edittext_book_name"
         style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:textStyle="bold"/>
 
     <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_yourLocation"
+        android:id="@+id/edittext_location"
         style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:textStyle="bold"/>
 
     <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_isbn"
+        android:id="@+id/edittext_isbn"
         style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

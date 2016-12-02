@@ -95,8 +95,8 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
         mButtonLogin = (Button) findViewById(R.id.button_login);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
-        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linearLayout_Main);
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linear_layout_main);
 
         mButtonLogin.setOnClickListener(this);
     }
