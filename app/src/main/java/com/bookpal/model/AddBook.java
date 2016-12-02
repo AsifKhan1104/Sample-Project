@@ -12,8 +12,17 @@ public class AddBook {
     private String language;
     private String bookType;
     private String locality;
+    private String userId;
 
     public AddBook() {
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getLocality() {
