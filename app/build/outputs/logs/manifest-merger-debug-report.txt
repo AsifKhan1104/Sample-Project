@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:2:1-46:12
-	xmlns:android
-		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:3:11-69
 	package
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:2:11-32
 		INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml
@@ -10,6 +8,8 @@ ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidMan
 	android:versionName
 		INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml
 		INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:3:11-69
 	android:versionCode
 		INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml
 		INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml
@@ -152,10 +152,10 @@ MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudi
 MERGED from [com.google.android.gms:play-services-tasks:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.2.1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
-	android:supportsRtl
-		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:15:9-41
+	android:supportsRtl
+		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:16:9-35
 	android:allowBackup
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:13:9-35
 	android:icon
@@ -351,10 +351,10 @@ MERGED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/An
 MERGED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:20:9-22:45
 MERGED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:20:9-22:45
 MERGED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:20:9-22:45
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:21:19-78
 	android:exported
 		ADDED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:21:19-78
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/AndroidManifest.xml:20:19-85
 meta-data#com.google.android.gms.version
@@ -395,10 +395,10 @@ MERGED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendr
 MERGED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:21:9-23:69
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:22:13-58
 	android:value
 		ADDED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/AndroidManifest.xml:22:13-58
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:7:9-11:39
 MERGED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:7:9-11:39
@@ -407,10 +407,10 @@ MERGED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidS
 MERGED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:7:9-11:39
 MERGED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:7:9-11:39
 MERGED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:7:9-11:39
-	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:10:13-37
 	android:authorities
 		ADDED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:8:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:10:13-37
 	android:initOrder
 		ADDED from [com.google.firebase:firebase-common:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/AndroidManifest.xml:11:13-36
 	android:name
@@ -449,10 +449,10 @@ ADDED from [com.google.firebase:firebase-analytics:9.2.1] /home/laukendra/Androi
 service#com.google.android.gms.measurement.AppMeasurementService
 ADDED from [com.google.firebase:firebase-analytics:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:36:7-39:37
 MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.2.1/AndroidManifest.xml:36:7-39:37
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:39:11-35
 	android:enabled
 		ADDED from [com.google.firebase:firebase-analytics:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:38:11-33
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:39:11-35
 	android:name
 		ADDED from [com.google.firebase:firebase-analytics:9.2.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:37:11-82
 uses-permission#com.google.android.c2dm.permission.RECEIVE

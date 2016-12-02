@@ -1,60 +1,71 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/bg_main"
-              android:gravity="center"
-              android:orientation="vertical"
-              android:padding="@dimen/padding_10"
-              tools:context="com.bookpal.fragment.SearchFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_main">
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_bookName"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10"
-        android:hint="@string/hintBookName"/>
-
-    <com.bookpal.uicomponent.CustomTextView
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10"
-        android:text="@string/or"
-        android:textColor="@color/text_color_hint"
-        android:textStyle="bold"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_yourLocation"
-        style="@style/EditTextStyle"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10"
-        android:hint="@string/hintLocation"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10"
+        tools:context="com.bookpal.fragment.SearchFragment">
 
-    <com.bookpal.uicomponent.CustomTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10"
-        android:text="@string/or"
-        android:textColor="@color/text_color_hint"
-        android:textStyle="bold"/>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_book_name"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:hint="@string/hintBookName"/>
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_isbn"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hintISBNOrAuthor"/>
+        <com.bookpal.uicomponent.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="@string/or"
+            android:textColor="@color/text_color_hint"
+            android:textStyle="bold"/>
 
-    <com.bookpal.uicomponent.CustomButton
-        android:id="@+id/button_search"
-        style="@style/ButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_60"
-        android:layout_marginRight="@dimen/margin_60"
-        android:layout_marginTop="@dimen/margin_30"
-        android:text="@string/searchBook"/>
-</LinearLayout>
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_location"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:hint="@string/hintLocation"/>
 
+        <com.bookpal.uicomponent.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="@string/or"
+            android:textColor="@color/text_color_hint"
+            android:textStyle="bold"/>
+
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_isbn"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintISBNOrAuthor"/>
+
+        <com.bookpal.uicomponent.CustomButton
+            android:id="@+id/button_search"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_60"
+            android:layout_marginRight="@dimen/margin_60"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/searchBook"/>
+    </LinearLayout>
+</RelativeLayout>

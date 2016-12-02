@@ -5,14 +5,14 @@
                 android:background="@drawable/bg_main">
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="gone"/>
 
     <LinearLayout
-        android:id="@+id/linearLayout_Main"
+        android:id="@+id/linear_layout_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -21,7 +21,7 @@
         tools:context="com.bookpal.fragment.AddFragment">
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_bookName"
+            android:id="@+id/edittext_book_name"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             android:hint="@string/hintBookName"/>
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_authorName"
+            android:id="@+id/edittext_author_name"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:inputType="textPersonName"/>
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_isbn"
+            android:id="@+id/edittext_isbn"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:inputType="text"/>
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_publishingYear"
+            android:id="@+id/edittext_publishing_year"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:maxLength="4"/>
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_language"
+            android:id="@+id/edittext_language"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
             android:inputType="text"/>
 
         <AutoCompleteTextView
-            android:id="@+id/editText_locality"
+            android:id="@+id/edittext_locality"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton_paperback"
+                android:id="@+id/radiobutton_paperback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/margin_20"
@@ -92,7 +92,7 @@
                 android:textColorHint="@color/text_color_hint"/>
 
             <RadioButton
-                android:id="@+id/radioButton_hardcover"
+                android:id="@+id/radiobutton_hardcover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_20"
