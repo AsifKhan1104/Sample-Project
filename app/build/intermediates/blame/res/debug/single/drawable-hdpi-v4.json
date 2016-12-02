@@ -8,12 +8,12 @@
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-hdpi/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_signin.png",
-        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable-hdpi/ic_signin.png"
-    },
-    {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/res/drawable-hdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_signin.png",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable-hdpi/ic_signin.png"
     },
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",

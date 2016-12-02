@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable/background_color_light.xml",
-        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable/background_color_light.xml"
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/res/drawable/common_plus_signin_btn_text_dark.xml"
     },
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable/background.png",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable/background.png"
     },
     {
-        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
-        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/res/drawable/common_plus_signin_btn_text_dark.xml"
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable/background_color_light.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/drawable/background_color_light.xml"
     },
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/drawable/background_color_dark.xml",

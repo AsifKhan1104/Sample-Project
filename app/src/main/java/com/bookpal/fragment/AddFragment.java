@@ -53,7 +53,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
     private RadioGroup mRadioGroup;
     private LinearLayout mLinearLayoutMain;
     private ProgressBar mProgressBar;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabaseReference;
     private Context mContext;
     private AutoCompleteTextView mAutoCompleteTextViewLocality;
 
@@ -81,7 +81,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
 
         mContext = getActivity();
         // Get firebase database instance to read / write data
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -210,7 +210,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         addBook.setUserId(userId);
 
         int bookCount = SharedPreference.getInt(mContext, AppConstants.PREF_KEY_BOOK_COUNT);
-        mDatabase.child("users").child("books").child("book_" + String.valueOf(bookCount)).setValue(addBook);
+        mDatabaseReference.child("users").child("books").child("book_" + String.valueOf(bookCount)).setValue(addBook);
         hideProgressBar();
 
         // increase book count by 1
