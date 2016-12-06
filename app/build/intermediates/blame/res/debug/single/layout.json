@@ -84,6 +84,10 @@
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_list_menu_item_radio.xml"
     },
     {
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/chat_item_rcv.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/layout/chat_item_rcv.xml"
+    },
+    {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_action_menu_layout.xml"
     },
@@ -122,6 +126,10 @@
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/chat_item_sent.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/layout/chat_item_sent.xml"
     },
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/fragment_search.xml",
@@ -194,6 +202,10 @@
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/chat.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/layout/chat.xml"
     },
     {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",

@@ -79,4 +79,11 @@
     <string name="publishingYear">Publishing Year -</string>
     <string name="language">Language -</string>
     <string name="bookType">Book Type -</string>
+
+    <!--chat-->
+    <string name="chat">Chat</string>
+    <string name="type_msg">Type message</string>
+    <string name="delivered_text">Delivered</string>
+    <string name="sending_text">Sending...</string>
+    <string name="failed_text">Failed</string>
 </resources>

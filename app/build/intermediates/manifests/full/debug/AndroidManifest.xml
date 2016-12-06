@@ -60,6 +60,10 @@
             android:label="@string/login"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.bookpal.chat.Chat"
+            android:label="@string/chat"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />

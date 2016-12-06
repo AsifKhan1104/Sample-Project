@@ -35,4 +35,7 @@ public interface AppConstants {
     String PUBLISHING_YEAR = "publishingYear";
     String LANGUAGE = "language";
     String BOOK_TYPE = "bookType";
+
+    //chat
+    String EXTRA_CHAT_DATA = "extraChatData";
 }

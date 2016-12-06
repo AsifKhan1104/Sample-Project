@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:2:1-50:12
 	package
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:2:11-32
 		INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml
@@ -34,7 +34,7 @@ ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidMan
 	android:name
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:10:22-69
 application
-ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:12:5-44:19
+ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:12:5-48:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/AndroidManifest.xml:22:5-20
@@ -212,6 +212,14 @@ ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidMan
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:42:13-42
 	android:name
 		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:41:13-58
+activity#com.bookpal.chat.Chat
+ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:44:9-47:51
+	android:screenOrientation
+		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:47:13-49
+	android:label
+		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:46:13-41
+	android:name
+		ADDED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml:45:13-38
 uses-sdk
 INJECTED from /home/laukendra/AndroidStudioProjects/BookPal/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43

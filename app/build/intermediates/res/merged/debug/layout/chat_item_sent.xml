@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/llaa"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="right"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/padding_10"
+        android:background="@drawable/chat_bubble_green"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_5"
+        android:paddingLeft="@dimen/padding_15"
+        android:paddingRight="@dimen/pad_chat_item"
+        android:paddingTop="@dimen/padding_5">
+
+        <TextView
+            android:id="@+id/lbl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_x_small"/>
+        <TextView
+            android:id="@+id/lbl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:text="sd"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/v1"
+        android:layout_below="@+id/v1"
+        android:layout_marginRight="@dimen/padding_20"
+        android:layout_marginTop="@dimen/padding_5"
+        android:text="textvdv"
+        android:textColor="@color/main_color_gray"
+        android:textSize="@dimen/text_size_small"/>
+</LinearLayout>

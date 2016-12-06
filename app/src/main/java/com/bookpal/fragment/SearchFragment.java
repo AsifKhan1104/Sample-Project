@@ -1,6 +1,7 @@
 package com.bookpal.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.bookpal.R;
+import com.bookpal.chat.Chat;
+import com.bookpal.model.Registration;
+import com.bookpal.utility.AppConstants;
+import com.bookpal.utility.SharedPreference;
 import com.google.firebase.database.DatabaseReference;
 
 /**
@@ -65,6 +70,11 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         linkViewId(view);
+
+        /*Intent intent = new Intent(getActivity(), Chat.class);
+        intent.putExtra("username", SharedPreference.getString(getActivity(), AppConstants.USER_NAME));
+        intent.putExtra("userid", SharedPreference.getString(getActivity(), AppConstants.USER_ID));
+        getActivity().startActivity(intent);*/
 
         return view;
     }
