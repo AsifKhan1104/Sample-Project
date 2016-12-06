@@ -5,11 +5,16 @@
         <item
             android:id="@+id/nav_search"
             android:icon="@android:drawable/ic_menu_search"
-            android:title="@string/findBook" />
+            android:title="@string/findBook"/>
         <item
             android:id="@+id/nav_add"
             android:icon="@drawable/ic_menu_book"
-            android:title="@string/addBook" />
+            android:title="@string/addBook"/>
+        <item
+            android:id="@+id/nav_my_books"
+            android:icon="@drawable/ic_menu_book"
+            android:title="@string/myBooks"
+            android:visible="false"/>
     </group>
 
     <item android:title="Communicate">
@@ -17,7 +22,7 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@android:drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Share"/>
         </menu>
     </item>
 

@@ -7,16 +7,18 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.bookpal.R;
+import com.bookpal.database.DBAdapter;
 import com.bookpal.model.Registration;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.GPSTracker;
-import com.bookpal.utility.SharedPreference;
 import com.bookpal.utility.Utility;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -28,10 +30,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.List;
+
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private EditText mEditTextName, mEditTextMobile, mEditTextEmail, mEditTextPassword, mEditTextLocation;
+    private EditText mEditTextName, mEditTextMobile, mEditTextEmail, mEditTextPassword;
+    private AutoCompleteTextView mAutoCompleteTextViewLocality;
     private Button mButtonRegister;
     private LinearLayout mLinearLayoutMain;
     private ProgressBar mProgressBar;
@@ -46,6 +51,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_sign_up);
 
         linkViewId();
+        constructAutoCompleteTextViewData();
         mContext = SignUpActivity.this;
         gps = new GPSTracker(this);
         // Get firebase database instance to read / write data
@@ -63,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     // save data in firebase database
                     writeNewUser(user.getUid());
                     // save user's data to SharedPreference also
-                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString(), user.getUid(), mEditTextMobile.getText().toString(), user.getEmail(), String.valueOf(gps.getLatitude()), String.valueOf(gps.getLatitude()));
+                    Utility.saveUserDataToSharedPreference(mContext, mEditTextName.getText().toString().trim(), user.getUid(), mEditTextMobile.getText().toString().trim(), user.getEmail(), mAutoCompleteTextViewLocality.getText().toString().trim());
 
                     goToMainActivity();
                 } else {
@@ -74,15 +80,32 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         };
     }
 
+    private void constructAutoCompleteTextViewData() {
+        DBAdapter dbAdapter = new DBAdapter(this);
+        dbAdapter.open();
+
+        List<String> pincode = dbAdapter.GetPincodes();
+        List<String> area = dbAdapter.GetArea();
+
+        pincode.addAll(area);
+
+        // close database
+        dbAdapter.close();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>
+                (this, android.R.layout.select_dialog_item, pincode);
+        mAutoCompleteTextViewLocality.setAdapter(adapter);
+    }
+
     private void linkViewId() {
         mEditTextName = (EditText) findViewById(R.id.editText_Name);
         mEditTextMobile = (EditText) findViewById(R.id.editText_mobile);
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
-        mEditTextLocation = (EditText) findViewById(R.id.editText_location);
+        mAutoCompleteTextViewLocality = (AutoCompleteTextView) findViewById(R.id.edittext_locality);
         mButtonRegister = (Button) findViewById(R.id.button_register);
-        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linearLayout_Main);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linear_layout_main);
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         mButtonRegister.setOnClickListener(this);
     }
@@ -109,7 +132,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     if (checkValidation()) {
                         showProgressBar();
 
-                        mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
+                        mAuth.createUserWithEmailAndPassword(mEditTextEmail.getText().toString().trim(), mEditTextPassword.getText().toString().trim())
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -133,6 +156,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         YoYo.with(Techniques.Shake)
                                 .duration(700)
                                 .playOn(mEditTextPassword);
+                    } else if (!(mAutoCompleteTextViewLocality.getText().length() > 0)) {
+                        Utility.showToastMessage(this, "Please enter correct pincode to complete the registration");
+                        YoYo.with(Techniques.Shake)
+                                .duration(700)
+                                .playOn(mAutoCompleteTextViewLocality);
                     }
                 } else {
                     Utility.showToastMessage(this, getResources().getString(R.string.no_internet_connection));
@@ -142,7 +170,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private boolean checkValidation() {
-        if (mEditTextEmail.getText().length() > 0 && mEditTextPassword.getText().length() > 0) {
+        if (mEditTextEmail.getText().length() > 0 && mEditTextPassword.getText().length() > 0 && mAutoCompleteTextViewLocality.getText().length() > 0) {
             return true;
         }
         return false;
@@ -151,15 +179,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     // writes new data to firebase database
     private void writeNewUser(String userId) {
         Registration registrationData = new Registration();
-        registrationData.setName(mEditTextName.getText().toString());
+        registrationData.setName(mEditTextName.getText().toString().trim());
         registrationData.setUserId(userId);
-        registrationData.setMobile(mEditTextMobile.getText().toString());
-        registrationData.setEmail(mEditTextEmail.getText().toString());
-        registrationData.setPassword(mEditTextPassword.getText().toString());
-        registrationData.setLatitude(String.valueOf(gps.getLatitude()));
-        registrationData.setLongitude(String.valueOf(gps.getLongitude()));
+        registrationData.setMobile(mEditTextMobile.getText().toString().trim());
+        registrationData.setEmail(mEditTextEmail.getText().toString().trim());
+        registrationData.setPassword(mEditTextPassword.getText().toString().trim());
+        registrationData.setLocality(mAutoCompleteTextViewLocality.getText().toString().trim());
 
-        mDatabase.child("users").child(userId).child("registration").setValue(registrationData);
+        mDatabase.child("users").child("registration").child(userId).setValue(registrationData);
     }
 
     private void showProgressBar() {

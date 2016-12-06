@@ -13,4 +13,11 @@
     <color name="text_color">#606468</color>
     <color name="edit_text_color_background">#3b4148</color>
     <color name="btn_background">#303030</color>
+
+    <!--chat-->
+    <color name="main_color_green">#00b863</color>
+    <color name="main_color_gray_dk">#3b3b3b</color>
+    <color name="main_color_gray_lt">#acacac</color>
+    <color name="main_color_gray">#7d7d7d</color>
+    <color name="gray_light">#e8e8e8</color>
 </resources>

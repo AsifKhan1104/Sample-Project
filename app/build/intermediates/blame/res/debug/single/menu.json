@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/menu/drawer.xml",
-        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/menu/drawer.xml"
-    },
-    {
         "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/laukendra/AndroidStudioProjects/BookPal/app/build/intermediates/res/merged/debug/menu/drawer.xml",
+        "source": "/home/laukendra/AndroidStudioProjects/BookPal/app/src/main/res/menu/drawer.xml"
     }
 ]

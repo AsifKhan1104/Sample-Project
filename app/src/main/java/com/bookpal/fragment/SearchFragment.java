@@ -1,13 +1,24 @@
 package com.bookpal.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import com.bookpal.R;
+import com.bookpal.chat.Chat;
+import com.bookpal.model.Registration;
+import com.bookpal.utility.AppConstants;
+import com.bookpal.utility.SharedPreference;
+import com.google.firebase.database.DatabaseReference;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,7 +28,7 @@ import com.bookpal.R;
  * Use the {@link SearchFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,6 +39,12 @@ public class SearchFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private EditText mEditTextBookName, mEditTextLocation, mEditTextAuthorOrIsbn;
+    private Button mButtonSearchBook;
+    private LinearLayout mLinearLayoutMain;
+    private ProgressBar mProgressBar;
+    private DatabaseReference mDatabase;
+    private Context mContext;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -51,7 +68,26 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false);
+        View view = inflater.inflate(R.layout.fragment_search, container, false);
+        linkViewId(view);
+
+        /*Intent intent = new Intent(getActivity(), Chat.class);
+        intent.putExtra("username", SharedPreference.getString(getActivity(), AppConstants.USER_NAME));
+        intent.putExtra("userid", SharedPreference.getString(getActivity(), AppConstants.USER_ID));
+        getActivity().startActivity(intent);*/
+
+        return view;
+    }
+
+    private void linkViewId(View view) {
+        mEditTextBookName = (EditText) view.findViewById(R.id.edittext_book_name);
+        mEditTextLocation = (EditText) view.findViewById(R.id.edittext_location);
+        mEditTextAuthorOrIsbn = (EditText) view.findViewById(R.id.edittext_isbn);
+        mLinearLayoutMain = (LinearLayout) view.findViewById(R.id.linear_layout_main);
+        mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+        mButtonSearchBook = (Button) view.findViewById(R.id.button_search);
+
+        mButtonSearchBook.setOnClickListener(this);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -59,6 +95,11 @@ public class SearchFragment extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     /**

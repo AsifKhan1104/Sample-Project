@@ -5,14 +5,14 @@
                 android:background="@drawable/bg_main">
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="gone"/>
 
     <LinearLayout
-        android:id="@+id/linearLayout_Main"
+        android:id="@+id/linear_layout_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -26,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintName"/>
+            android:hint="@string/hintName"
+            android:inputType="textPersonName"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_mobile"
@@ -34,7 +35,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintMobile"/>
+            android:hint="@string/hintMobile"
+            android:inputType="number"
+            android:maxLength="10"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_email"
@@ -42,18 +45,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_15"
-            android:hint="@string/hintEmail"/>
+            android:hint="@string/hintEmail"
+            android:inputType="textEmailAddress"/>
 
         <com.bookpal.uicomponent.CustomEditText
             android:id="@+id/editText_password"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintPwd"
+            android:inputType="textVisiblePassword"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/edittext_locality"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_60"
-            android:hint="@string/hintPwd"/>
+            android:hint="@string/hintPinCode"/>
 
         <com.bookpal.uicomponent.CustomEditText
-            android:id="@+id/editText_location"
+            android:id="@+id/edittext_location"
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

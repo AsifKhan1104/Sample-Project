@@ -1,87 +1,114 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/bg_main"
-              android:gravity="center"
-              android:orientation="vertical"
-              android:padding="@dimen/padding_10"
-              tools:context="com.bookpal.fragment.AddFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_main">
 
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_bookName"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintBookName"/>
-
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_authorName"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintAuthor"/>
-
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_isbn"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintISBN"/>
-
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_publishingYear"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintPublishingYear"/>
-
-    <com.bookpal.uicomponent.CustomEditText
-        android:id="@+id/editText_language"
-        style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_15"
-        android:hint="@string/hintLanguage"/>
-
-    <RadioGroup
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_20"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
-        <RadioButton
-            android:id="@+id/radioButton_paperback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_20"
-            android:checked="true"
-            android:text="@string/paperback"
-            android:textColor="@color/text_color_hint"
-            android:textColorHint="@color/text_color_hint"/>
-
-        <RadioButton
-            android:id="@+id/radioButton_hardcover"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_20"
-            android:text="@string/hardcover"
-            android:textColor="@color/text_color_hint"
-            android:textColorHint="@color/text_color_hint"/>
-    </RadioGroup>
-
-    <com.bookpal.uicomponent.CustomButton
-        android:id="@+id/button_add"
-        style="@style/ButtonStyle"
+    <LinearLayout
+        android:id="@+id/linear_layout_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_60"
-        android:layout_marginRight="@dimen/margin_60"
-        android:text="@string/add"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10"
+        tools:context="com.bookpal.fragment.AddFragment">
 
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_book_name"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintBookName"/>
+
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_author_name"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintAuthor"
+            android:inputType="textPersonName"/>
+
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_isbn"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintISBN"
+            android:inputType="text"/>
+
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_publishing_year"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintPublishingYear"
+            android:inputType="number"
+            android:maxLength="4"/>
+
+        <com.bookpal.uicomponent.CustomEditText
+            android:id="@+id/edittext_language"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintLanguage"
+            android:inputType="text"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/edittext_locality"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:hint="@string/hintPinCode"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_paperback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:checked="true"
+                android:text="@string/paperback"
+                android:textColor="@color/text_color_hint"
+                android:textColorHint="@color/text_color_hint"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton_hardcover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="@string/hardcover"
+                android:textColor="@color/text_color_hint"
+                android:textColorHint="@color/text_color_hint"/>
+        </RadioGroup>
+
+        <com.bookpal.uicomponent.CustomButton
+            android:id="@+id/button_add"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_60"
+            android:layout_marginRight="@dimen/margin_60"
+            android:text="@string/add"/>
+    </LinearLayout>
+
+</RelativeLayout>

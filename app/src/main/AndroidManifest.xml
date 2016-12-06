@@ -41,6 +41,10 @@
             android:name=".activity.ManualSignInActivity"
             android:label="@string/login"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".chat.Chat"
+            android:label="@string/chat"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

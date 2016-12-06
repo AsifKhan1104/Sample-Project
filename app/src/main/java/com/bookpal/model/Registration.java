@@ -10,8 +10,7 @@ public class Registration {
     private String mobile;
     private String email;
     private String password;
-    private String latitude;
-    private String longitude;
+    private String locality;
 
     public Registration() {
     }
@@ -56,19 +55,11 @@ public class Registration {
         this.password = password;
     }
 
-    public String getLatitude() {
-        return latitude;
+    public String getLocality() {
+        return locality;
     }
 
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
+    public void setLocality(String locality) {
+        this.locality = locality;
     }
 }

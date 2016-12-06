@@ -2,6 +2,7 @@
     <string name="app_name">BookPal</string>
     <string name="findBook">Find Book</string>
     <string name="addBook">Add New Book</string>
+    <string name="myBooks">My Books</string>
     <string name="action_about">About</string>
     <string name="searchBook">Search</string>
     <string name="or">OR</string>
@@ -31,6 +32,7 @@
     <string name="hintMobile">Mobile</string>
     <string name="hintEmail">Email</string>
     <string name="hintPwd">Password</string>
+    <string name="hintPinCode">Area / Pincode</string>
     <string name="hintYourLocation">Your Location</string>
 
     <string name="title_activity_search">SearchActivity</string>
@@ -61,6 +63,8 @@
     <string name="permission_denial_message">Please provide required permission to access the app.</string>
     <string name="label_ok">Ok</string>
     <string name="no_internet_connection">No Internet connectivity. Please check your internet connection and try again.</string>
+    <string name="error_msg">Some error occurred. Please try after sometime.</string>
+    <string name="no_book_added">No books added. Please add a book and increase your reading network.</string>
 
     <string name="msg_image_not_uploaded">Please try again, unable to upload image</string>
     <string name="msg_image_not_deleted">Please try again, unable to delete image</string>
@@ -68,4 +72,18 @@
     <string name="msg_404">Unable to send request to server. Please try again later.</string>
     <string name="msg_4xx">Something happened. Please login again to continue</string>
     <string name="msg_5xx">Oops!! Something happened. Please try again</string>
+
+    <string name="bookName">Book Name -</string>
+    <string name="authorName">Author Name -</string>
+    <string name="isbn">Isbn -</string>
+    <string name="publishingYear">Publishing Year -</string>
+    <string name="language">Language -</string>
+    <string name="bookType">Book Type -</string>
+
+    <!--chat-->
+    <string name="chat">Chat</string>
+    <string name="type_msg">Type message</string>
+    <string name="delivered_text">Delivered</string>
+    <string name="sending_text">Sending...</string>
+    <string name="failed_text">Failed</string>
 </resources>

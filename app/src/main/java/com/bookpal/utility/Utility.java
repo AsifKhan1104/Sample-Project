@@ -11,6 +11,7 @@ import com.bookpal.model.Response;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -230,12 +231,34 @@ public class Utility {
         return netInfo != null && netInfo.isConnected();
     }
 
-    public static void saveUserDataToSharedPreference(Context context, String userName, String uid, String userMobile, String userEmail, String userLat, String userLong) {
+    public static void saveUserDataToSharedPreference(Context context, String userName, String uid, String userMobile, String userEmail, String userLocality) {
         SharedPreference.setString(context, AppConstants.USER_NAME, userName);
         SharedPreference.setString(context, AppConstants.USER_ID, uid);
         SharedPreference.setString(context, AppConstants.USER_MOBILE, userMobile);
         SharedPreference.setString(context, AppConstants.USER_EMAIL, userEmail);
-        SharedPreference.setString(context, AppConstants.USER_LAT, userLat);
-        SharedPreference.setString(context, AppConstants.USER_LONG, userLong);
+        SharedPreference.setString(context, AppConstants.USER_LOCALITY, userLocality);
+    }
+
+    public void copyDataBase() throws IOException {
+        String DB_NAME = "UserAddress";
+        String DB_PATH = mContext.getDatabasePath(DB_NAME).getPath();
+
+        InputStream is = mContext.getAssets().open("UserAddress.db");
+
+        String outFileName = DB_PATH;
+        try {
+            OutputStream out = new FileOutputStream(outFileName);
+
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                out.write(buffer, 0, length);
+            }
+            is.close();
+            out.flush();
+            out.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

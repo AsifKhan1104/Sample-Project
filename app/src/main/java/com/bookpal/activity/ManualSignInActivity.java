@@ -68,11 +68,11 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void readAndSaveUserData(String uid) {
-        mDatabase.child("users").child(uid).child("registration").addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabase.child("users").child("registration").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Registration userData = dataSnapshot.getValue(Registration.class);
-                Utility.saveUserDataToSharedPreference(mContext, userData.getName(), userData.getUserId(), userData.getMobile(), userData.getEmail(), userData.getLatitude(), userData.getLongitude());
+                //Utility.saveUserDataToSharedPreference(mContext, userData.getName(), userData.getUserId(), userData.getMobile(), userData.getEmail(), userData.getLatitude(), userData.getLongitude());
                 goToMainActivity();
             }
 
@@ -95,8 +95,8 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
         mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
         mButtonLogin = (Button) findViewById(R.id.button_login);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
-        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linearLayout_Main);
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        mLinearLayoutMain = (LinearLayout) findViewById(R.id.linear_layout_main);
 
         mButtonLogin.setOnClickListener(this);
     }
@@ -109,7 +109,7 @@ public class ManualSignInActivity extends AppCompatActivity implements View.OnCl
                     if (checkValidation()) {
                         showProgressBar();
 
-                        mAuth.signInWithEmailAndPassword(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
+                        mAuth.signInWithEmailAndPassword(mEditTextEmail.getText().toString().trim(), mEditTextPassword.getText().toString().trim())
                                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {

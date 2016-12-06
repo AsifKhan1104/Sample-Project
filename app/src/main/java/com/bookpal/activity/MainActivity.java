@@ -1,6 +1,7 @@
 package com.bookpal.activity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,7 +20,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.bookpal.R;
+import com.bookpal.database.DBAdapter;
 import com.bookpal.fragment.AddFragment;
+import com.bookpal.fragment.MyBooksFragment;
 import com.bookpal.fragment.SearchFragment;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.MarshMallowUtils;
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity
     private NavigationView mNavigationView;
     private static int REQUEST_CODE = 11;
     private TextView mTextViewNavHeaderUserName, mTextViewNavHeaderEmail;
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +48,10 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         linkViewId();
+
         String flag = getIntent().getStringExtra(AppConstants.FROM_SIGN_UP_OR_SIGN_IN);
         if (flag != null && flag.equals(AppConstants.FLAG_YES)) {
             openAddFragment();
-            // set name & email in navigation header
-            mTextViewNavHeaderUserName.setText(SharedPreference.getString(this, AppConstants.USER_NAME));
-            mTextViewNavHeaderEmail.setText(SharedPreference.getString(this, AppConstants.USER_EMAIL));
         } else {
             openSearchFragment();
         }
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put(" Access Course Location", Manifest.permission.ACCESS_COARSE_LOCATION);
         hashMap.put(" Access Fine Location", Manifest.permission.ACCESS_FINE_LOCATION);
-        if (MarshMallowUtils.checkForMultiplePermissionsToGrant(this, hashMap).size() != 0) {
+        if (MarshMallowUtils.checkForMultiplePermissionsToGrant(mContext, hashMap).size() != 0) {
             MarshMallowUtils.requestPermission(this, hashMap, REQUEST_CODE_PERMISSIONS);
         }
     }
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity
             //do your code here
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
-                MarshMallowUtils.showDialog(this, getString(R.string.permission_denial_message), new DialogInterface.OnClickListener() {
+                MarshMallowUtils.showDialog(mContext, getString(R.string.permission_denial_message), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
@@ -101,14 +103,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void linkViewId() {
+        mContext = MainActivity.this;
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mTextViewNavHeaderUserName = (TextView) findViewById(R.id.nav_header_userName);
         mTextViewNavHeaderEmail = (TextView) findViewById(R.id.nav_header_email);
-
-        // set name & email in navigation header
-        mTextViewNavHeaderUserName.setText(SharedPreference.getString(this, AppConstants.USER_NAME));
-        mTextViewNavHeaderEmail.setText(SharedPreference.getString(this, AppConstants.USER_EMAIL));
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mActionBarDrawerToggle = new ActionBarDrawerToggle(
@@ -119,6 +118,14 @@ public class MainActivity extends AppCompatActivity
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
         mNavigationView.getMenu().getItem(0).setChecked(true);
+
+        // if user is logged in then do this task
+        if (Utility.isLoggedIn(mContext)) {
+            // set name & email in navigation header
+            mTextViewNavHeaderUserName.setText(SharedPreference.getString(mContext, AppConstants.USER_NAME));
+            mTextViewNavHeaderEmail.setText(SharedPreference.getString(mContext, AppConstants.USER_EMAIL));
+            mNavigationView.getMenu().getItem(2).setVisible(true);
+        }
     }
 
     @Override
@@ -167,17 +174,20 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_add) {
 
             // If user is logged in then navigate to add book screen else navigate to sign in screen
-            if (Utility.isLoggedIn(this)) {
+            if (Utility.isLoggedIn(mContext)) {
                 fragment = (Fragment) AddFragment.newInstance();
                 replaceFragment(fragment, getString(R.string.addBook));
             } else {
-                Intent intent = new Intent(this, SignInActivity.class);
+                Intent intent = new Intent(mContext, SignInActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
             }
+        } else if (id == R.id.nav_my_books) {
+            fragment = (Fragment) MyBooksFragment.newInstance();
+            replaceFragment(fragment, getString(R.string.myBooks));
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_TEXT, "Here is the link for this amazing app - " + "https://play.google.com/store/apps/details?id=" + this.getPackageName());
+            intent.putExtra(Intent.EXTRA_TEXT, "Here is the link for this amazing app - " + "https://play.google.com/store/apps/details?id=" + mContext.getPackageName());
 
             try {
                 startActivity(Intent.createChooser(intent, "Select an action"));
