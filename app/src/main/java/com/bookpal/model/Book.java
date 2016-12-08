@@ -3,7 +3,7 @@ package com.bookpal.model;
 /**
  * Created by asif on 16/7/16.
  */
-public class AddBook {
+public class Book {
 
     private String bookName;
     private String authorName;
@@ -14,7 +14,7 @@ public class AddBook {
     private String locality;
     private String userId;
 
-    public AddBook() {
+    public Book() {
     }
 
     public String getUserId() {

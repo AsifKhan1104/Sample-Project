@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.bookpal.R;
 import com.bookpal.adapter.RecyclerViewAdapter_MyBooks;
-import com.bookpal.model.AddBook;
+import com.bookpal.model.Book;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.SharedPreference;
 import com.bookpal.utility.Utility;
@@ -110,12 +110,12 @@ public class MyBooksFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 hideProgressBar();
 
-                List<AddBook> list = new ArrayList<AddBook>();
+                List<Book> list = new ArrayList<Book>();
                 HashMap<String, HashMap<String, String>> hashMap = (HashMap<String, HashMap<String, String>>) dataSnapshot.getValue();
                 if (hashMap != null && hashMap.size() > 0) {
                     Iterator entries = hashMap.entrySet().iterator();
                     while (entries.hasNext()) {
-                        AddBook addBook = new AddBook();
+                        Book addBook = new Book();
                         Map.Entry entry = (Map.Entry) entries.next();
                         HashMap<String, String> hashMap_sub = (HashMap<String, String>) entry.getValue();
 
@@ -180,6 +180,16 @@ public class MyBooksFragment extends Fragment {
         }
     }
 
+    private void showProgressBar() {
+        mRecyclerView.setVisibility(View.GONE);
+        mProgressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar() {
+        mProgressBar.setVisibility(View.GONE);
+        mRecyclerView.setVisibility(View.VISIBLE);
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -193,15 +203,5 @@ public class MyBooksFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    private void showProgressBar() {
-        mRecyclerView.setVisibility(View.GONE);
-        mProgressBar.setVisibility(View.VISIBLE);
-    }
-
-    private void hideProgressBar() {
-        mProgressBar.setVisibility(View.GONE);
-        mRecyclerView.setVisibility(View.VISIBLE);
     }
 }

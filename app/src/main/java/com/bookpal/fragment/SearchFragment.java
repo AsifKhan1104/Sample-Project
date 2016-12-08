@@ -1,10 +1,10 @@
 package com.bookpal.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +14,15 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.bookpal.R;
-import com.bookpal.chat.Chat;
-import com.bookpal.model.Registration;
-import com.bookpal.utility.AppConstants;
-import com.bookpal.utility.SharedPreference;
+import com.bookpal.model.Book;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,6 +49,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
     private ProgressBar mProgressBar;
     private DatabaseReference mDatabase;
     private Context mContext;
+    private List<Book> mBookList;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -87,6 +92,8 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         mButtonSearchBook = (Button) view.findViewById(R.id.button_search);
 
+        mBookList = new ArrayList<>();
+
         mButtonSearchBook.setOnClickListener(this);
     }
 
@@ -99,7 +106,32 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_search:
+                // Get a reference to our posts
+                final FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference ref = database.getReference("/users/books");
+                //Query queryRef = ref.orderByChild("books");
 
+                // Attach a listener to read the data at our posts reference
+                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                            Book book = postSnapshot.getValue(Book.class);
+                            mBookList.add(book);
+                        }
+                        Log.e("data", mBookList.toString());
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        System.out.println("read failed: " + databaseError.getCode());
+                    }
+                });
+
+                break;
+        }
     }
 
     /**

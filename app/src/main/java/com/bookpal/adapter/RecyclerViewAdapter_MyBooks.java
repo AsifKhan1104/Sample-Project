@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bookpal.R;
-import com.bookpal.model.AddBook;
+import com.bookpal.model.Book;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ import java.util.List;
  */
 public class RecyclerViewAdapter_MyBooks extends RecyclerView.Adapter<RecyclerViewHolder_MyBooks> {
     private Context mContext;
-    private List<AddBook> addedBooksList;
+    private List<Book> addedBooksList;
 
-    public RecyclerViewAdapter_MyBooks(Context context, List<AddBook> list) {
+    public RecyclerViewAdapter_MyBooks(Context context, List<Book> list) {
         this.mContext = context;
         this.addedBooksList = list;
     }

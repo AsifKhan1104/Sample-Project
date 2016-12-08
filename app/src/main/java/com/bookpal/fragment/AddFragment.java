@@ -17,7 +17,7 @@ import android.widget.RadioGroup;
 
 import com.bookpal.R;
 import com.bookpal.database.DBAdapter;
-import com.bookpal.model.AddBook;
+import com.bookpal.model.Book;
 import com.bookpal.utility.AlertDialogFragment;
 import com.bookpal.utility.AppConstants;
 import com.bookpal.utility.SharedPreference;
@@ -178,24 +178,9 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
-
     // add new book to user's firebase database
     private void addNewBook(String userId) {
-        AddBook addBook = new AddBook();
+        Book addBook = new Book();
         addBook.setBookName(mEditTextBookName.getText().toString().trim());
         addBook.setAuthorName(mEditTextAuthorName.getText().toString().trim());
         addBook.setIsbn(mEditTextIsbn.getText().toString().trim());
@@ -251,5 +236,20 @@ public class AddFragment extends Fragment implements View.OnClickListener {
             return true;
         }
         return false;
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p/>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 }
